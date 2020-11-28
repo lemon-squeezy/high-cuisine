@@ -1,30 +1,26 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <h2>I'm extending the base template</h2>
+    <blockquote>A recipe has no soul. <br>
+        You, as the cook, has to bring soul to the recipe!<br>
+    </blockquote>
+    <p>Thomas Keller</p>
 
-    {% for recipe in recipes %}
-        {{ recipe.recipe_name}}<br>
-        {{ recipe.category_name }}<br>
-        {{ recipe.ingredients }}<br>
-        {{ recipe.method }}<br>
-        {{ recipe.date_added }}<br>
-    {% endfor %}
 
     <ul class="collapsible">
+        {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header white-text light-green darken-2 text-shadow"><i class="fas fa-caret-down"></i>First</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+            <div class="collapsible-header white-text light-green darken-2 text-shadow">
+                <i class="fas fa-caret-down"></i>
+                <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.date_added }}
+            </div>
+            <div class="collapsible-body">
+                <strong>{{ recipe.category_name }}</strong>
+                <p>{{ recipe.ingredients }}</p>
+                <p>{{ recipe.method }}</p>
+            </div>
         </li>
-        <li>
-            <div class="collapsible-header white-text light-green darken-2 text-shadow"><i class="fas fa-caret-down"></i>Second</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
-        <li>
-            <div class="collapsible-header white-text light-green darken-2 text-shadow"><i class="fas fa-caret-down"></i>Third</div>
-            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
-        </li>
+        {% endfor %}
     </ul>
 
 {% endblock %}
-
