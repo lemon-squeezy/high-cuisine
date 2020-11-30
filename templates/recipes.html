@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 
-    <blockquote>A recipe has no soul. <br>
+    <blockquote green>A recipe has no soul. <br>
         You, as the cook, has to bring soul to the recipe!<br>
     </blockquote>
     <p>Thomas Keller</p>
@@ -10,7 +10,7 @@
     <ul class="collapsible">
         {% for recipe in recipes %}
         <li>
-            <div class="collapsible-header white-text light-green darken-2 text-shadow">
+            <div class="collapsible-header white-text green darken-2 text-shadow">
                 <i class="fas fa-caret-down"></i>
                 <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.date_added }}
             </div>
