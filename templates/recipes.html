@@ -19,10 +19,10 @@
                 <strong>{{ recipe.recipe_name }}</strong> : {{ recipe.date_added }}
             </div>
             <div class="collapsible-body">
-                <strong>{{ recipe.category_name }}</strong>
-                <p>{{ recipe.ingredients }}</p>
-                <p>{{ recipe.method }}</p>
-                <p><em>by: {{ recipe.created_by }}</em></p>
+                <strong>{{ recipe.category_name  }}</strong>
+                <p>{{ recipe.recipe_ingredients  }}</p>
+                <p>{{ recipe.method  }}</p>
+                <p><em>by: {{ recipe.created_by  }}</em></p>
             </div>
         </li>
         {% endfor %}
