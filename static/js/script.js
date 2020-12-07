@@ -4,6 +4,7 @@
     $('.sidenav').sidenav({edge: "right"});
     $('.collapsible').collapsible();
     $('select').formSelect();
+    $('.modal').modal();
     // $('.datepicker').datepicker();
   
   });

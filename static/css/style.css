@@ -14,3 +14,9 @@
     margin: 5px;
     line-height: 42px;
 }
+
+/* Modal */
+
+.modal-content-container {
+  margin: 30px;
+}

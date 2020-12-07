@@ -58,11 +58,35 @@
             <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow">
                 Cancel <i class="fas fa-times-circle right"></i>
             </a>
+            <!-- Delete Button -->
+            <a href="#delete-modal"
+            class="btn-large red accent-4 text-shadow modal-trigger">
+                Delete Recipe <i class="fas fa-trash right"></i>
+            </a> 
                 <button type="submit" class="btn-large green darken-2 text-shadow">
-                    Edit Recipe <i class="fas fa-edit right"></i>
-                </button>
+                    Update Recipe <i class="fas fa-edit right "></i>
+                </button>   
             </div>
         </div>
+              <!-- Modal Structure -->
+      <div id="delete-modal" class="modal">
+        <div class="modal-content-container">
+          <div class="modal-content">
+            <h4>Are you sure you want to delete?</h4>
+            <p>
+              If you delete your recipe, this can not be undone.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <a
+              href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}"
+              class="modal-close btn-large red lighten-1">
+              Delete Recipe
+              </a>
+            <a class="modal-close btn-large red lighten-2">Cancel</a>
+          </div>
+        </div>
+      </div>
     </form>
 </div>
 
