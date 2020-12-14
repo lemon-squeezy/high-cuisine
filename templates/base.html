@@ -15,12 +15,14 @@
 <body>
     <header>
     <!-- top navbar -->
-        <nav class="nav-extended text-shadow green darken-2">
+        <nav class="nav-extended white">
             <div class="nav-wrapper">
-            <a href="{{ url_for('get_recipes')}}" class="brand-logo">High Cuisine</a>
+            <a href="{{ url_for('home') }}">
+                <img class="logo" src="{{ url_for('static', filename='css/images/logo-nav.png') }}" alt="High Cuisine"/>
+            </a>
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars"></i></a>
             <ul class="right hide-on-med-and-down">
-                <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
+                <li><a href="{{ url_for('home')}}">Home</a></li>
                 <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">About</a></li>
@@ -51,6 +53,12 @@
                     <li><a href="{{ url_for('register')}}">Register</a></li>
                 {% endif%}
         </ul>
+            <!--- BANNER -->
+        <div class="wrapper">
+            <img class="banner" src="https://res.cloudinary.com/digsjo3yh/image/upload/v1607875764/banner_buksop.jpg" class="img-fluid">
+            <img class="inner-logo" src="{{ url_for('static', filename='css/images/logo-wb.png') }}" alt="High Cuisine"/>
+            
+        </div>
     </header>
 
     <section>

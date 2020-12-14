@@ -27,12 +27,19 @@
             <label for="recipe_name">Recipe Name</label>
         </div>
     </div>
+    <!-- Preparation Time -->
+    <div class="row">
+        <div class="input-field inline col s12">
+            <i class="fas fa-clock green-text text-darken-2 prefix"></i>
+            <input id="recipe_time" name="recipe_time" type="text" minlength="1" maxlength="3" class="validate" required/>
+            <label for="recipe_time">Preparation Time (mins)</label>
+        </div>
+    </div>
     <!-- Recipe Ingredients -->
       <div class="row">
         <div class="input-field col s12">
             <i class="fas fa-carrot green-text text-darken-2 prefix"></i>
-            <input id="recipe_ingredients" name="recipe_ingredients" minlength="5" maxlength="50"
-            type="text" class="validate" required>
+            <textarea id="recipe_ingredients" name="recipe_ingredients" cols="1" rows="30" class="materialize-textarea validate" required></textarea>
             <label for="recipe_ingredients">Ingredients</label>
         </div>
     </div>
@@ -43,7 +50,18 @@
             <textarea id="recipe_method" name="recipe_method" minlength="5" maxlength="3000" class="materialize-textarea validate" required></textarea>
             <label for="recipe_method">Method</label>
         </div>
-</div>
+    </div>
+    <!--Recipe Image URL-->
+    <div class="row">
+         <div class="row">
+            <div class="input-field col s12">
+               <i class="fas fa-image green-text text-darken-2 prefix"></i>
+               <input id="img_url" name="img_url" type="text" minlength="5" pattern="https://.*" class="validate lazyload" required/>
+               <label for="img_url">Add your Image</label>
+               <span class="helper-text" data-error="wrong" data-success="right">To add an image, please enter a valid URL.</span>
+            </div>
+         </div>
+    </div>
         <!-- Submit Button -->
         <div class="row">
             <div class="col s12 center-align">

@@ -20,3 +20,44 @@
 .modal-content-container {
   margin: 30px;
 }
+
+/* Navbar */
+
+.logo{
+    height: 60px;
+    margin-bottom: -20px;
+    padding-top: 5px;
+    padding-left: 10px;
+}
+
+nav ul a{
+    color: #369956 !important;
+    font-weight: 600;
+}
+
+/* Banner */
+.wrapper{
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.banner{
+    position: relative;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    z-index: 1;
+    transition:opacity 500ms ease-out;
+}
+
+.banner:hover{
+    opacity: 1;
+}
+
+.inner-logo{
+    position: absolute;
+    top: 12%;
+    left: 42%;
+    width: 300px;
+    z-index: 2;
+}
