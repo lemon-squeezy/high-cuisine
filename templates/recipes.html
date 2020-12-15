@@ -26,7 +26,7 @@
 <div class="container card-container recipe-card-container">
    <div class="row">
       {% for recipe in recipes %}
-      <div class="col s6 m4 l3">
+      <div class="col s12 m4 l3">
          <div class="card recipe-card">
             <!--Recipe card image-->
             <div class="card-image card-img">
@@ -39,24 +39,22 @@
                <div class="col s12">
                   <p class="cards-title"><strong>{{ recipe.recipe_name }}</strong></p>
                   <p>by: {{ recipe.created_by }}</p>
+                  <p><em>{{ recipe.date_added }}</em></p>
                </div>
                <!--Recipe card edit & delete btns, only visible to user who added recipe card-->
                <div>
                   <div class="col s12 card-btns">
                      {% if session.user|lower == recipe.created_by|lower %}
                      <!--Edit btn-->
-                     <a
-                        href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}"
-                        class="btn right card-btn"
-                        >Edit</a
+                     <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small waves-effect waves-light green">Edit</a
                         >
                   </div>
                   <!--Delete btn and modal for delete confirmation-->
-                  <div class="col s12 card-btns">
+                  <div class="col s12">
                      <!-- Delete btn and modal trigger -->
                      <a
                         data-target="{{ recipe._id }}"
-                        class="btn right modal-trigger card-btn"
+                        class="btn-small waves-effect waves-light modal-trigger red"
                         >Delete</a
                         >
                      {% endif %}

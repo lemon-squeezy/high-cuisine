@@ -50,7 +50,18 @@
             </textarea>
             <label for="recipe_method">Method</label>
         </div>
-</div>
+    </div>
+    <!--Recipe Image URL-->
+    <div class="row">
+         <div class="row">
+            <div class="input-field col s12">
+               <i class="fas fa-image green-text text-darken-2 prefix"></i>
+               <input id="img_url" name="img_url" type="text" minlength="5" pattern="https://.*" class="validate lazyload" required/>
+               <label for="img_url">{{ recipe.image_url }}</label>
+               <span class="helper-text" data-error="wrong" data-success="right">{{ recipe.img_url }}</span>
+            </div>
+         </div>
+    </div>
         <!-- Submit Button -->
         <div class="row">
             <div class="col s12 center-align">

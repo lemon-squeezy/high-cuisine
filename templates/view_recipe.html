@@ -1,58 +1,43 @@
 {% extends "base.html" %}
 {% block content %}
-<!--Page header-->
-<section class="container page-callout">
-   <!--Recipe image-->
-   <img class="page-callout-img" loading="lazy" id="view-recipe-img" src="{{ recipe.img_url }}" alt="background"/>
-   <div class="page-callout-text">
-      <!--Recipe name title-->
-      <div>
-         <h3>{{ recipe.recipe_name }}</h3>
-         <br />
-         <!--Recipe created by-->
-         <p>by: {{ recipe.created_by }}</p>
-      </div>
-   </div>
+<section class="container center-align">
+  <div class="row">
+    <div class="col s12">
+      <h1>"{{ recipe.recipe_name }}"</h1>
+    </div>
+  </div>
 </section>
-<div id="yellow-container" class="container">
-   <div id="yellow-container-inner" class="row">
-      <!--Recipe time-->
-      <div class="col s4">
-         <i class="material-icons">timer</i>
-         <p>{{ recipe.recipe_time }} mins</p>
+
+<!-- Rectipe Details -->
+<section class="row recipe_details">
+  <div class="col s12 recipe-info-text">
+        <!-- Recipe Image -->
+    <div class="card-panel">
+      <img class="responsive-img recipe-pic" src="{{ recipe.img_url }}"alt="image of {{ recipe.recipe_name }}"/>
+    </div>
+    <div class="card-panel">
+      <h2>Ingredients</h2>
+      {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+      <p>{{ ingredient }}</p>
+      {% endfor %}
+      <h2>Method</h2>
+      {% for method in recipe.recipe_method.splitlines() %}
+      <p>{{ method }}</p>
+      {% endfor %}
+      <div id="recipe-by">
+        <h5>Recipe posted by:</h5>
+        <p>{{ recipe.created_by }}</p>
+        <h5>Recipe posted on:</h5>
+        <p>{{ recipe.date_added }}</p>
+        <!-- Share Buttons, from sharethis.com -->
+        <h5>Share this recipe</h5>
+        <div class="sharethis-inline-share-buttons"></div>
       </div>
-      <!--Recipe food category-->
-      <div class="col s4">
-         <i class="material-icons">local_dining</i>
-         <p>{{ recipe.category }}</p>
-      </div>
-   </div>
-</div>
-<!--Ingredients & method tabs-->
-<div id="tab-container" class="container">
-   <div class="row">
-      <div class="col s12">
-         <ul class="tabs">
-            <li class="tab col s6">
-               <a class="active" href="#ingredients">Ingredients</a>
-            </li>
-            <li class="tab col s6">
-               <a href="#method">Method</a>
-            </li>
-         </ul>
-      </div>
-      <!--Ingredients tab-->
-      <div id="ingredients" class="col s12">
-         {% for ingredient in recipe.ingredients.splitlines() %}
-         <p>{{ ingredient }}</p>
-         {% endfor %}
-      </div>
-      <!--Method tab-->
-      <div id="method" class="col s12">
-         {% for step in recipe.method.splitlines() %}
-         <p>{{ step }}</p>
-         {% endfor %}
-      </div>
-   </div>
-</div>
+    </div>
+  </div>
+
+
+
+</section>
+
 {% endblock %}

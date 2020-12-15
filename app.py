@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -115,6 +116,7 @@ def logout():
 @app.route("/add_recipe", methods=["GET", "POST"])
 def add_recipe():
     if request.method == "POST":
+        current_date = datetime.today().strftime('%d.%m.%Y')
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
@@ -122,7 +124,8 @@ def add_recipe():
             "recipe_time": request.form.get("recipe_time"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "date_added": current_date
         }
         mongo.db.recipes.insert_one(recipe)
         flash("Recipe Successfully Added")
@@ -135,12 +138,15 @@ def add_recipe():
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
 def edit_recipe(recipe_id):
     if request.method == "POST":
+        current_date = datetime.today().strftime('%d.%m.%Y')
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
+            "img_url": request.form.get("img_url"),
             "recipe_ingredients": request.form.get("recipe_ingredients"),
             "recipe_method": request.form.get("recipe_method"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "date_added": current_date
         }
         mongo.db.recipes.update({"_id": ObjectId(recipe_id)}, submit)
         flash("Recipe Successfully Updated")
