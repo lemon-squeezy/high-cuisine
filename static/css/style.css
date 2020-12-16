@@ -14,6 +14,9 @@
     margin: 5px;
     line-height: 42px;
 }
+/* ul.ingredients{
+    list-style-type: disc !important;
+} */
 
 /* Modal */
 
@@ -33,6 +36,7 @@
 nav ul a{
     color: #369956 !important;
     font-weight: 600;
+    font-size: large;
 }
 
 /* Banner */
@@ -45,16 +49,11 @@ nav ul a{
     position: relative;
     top: 0;
     left: 0;
-    max-height: 350px;
+    min-height: 70px;
+    max-height: 500px;
     opacity: 0.9;
     z-index: 1;
-    /* transition:opacity 500ms ease-out; */
 }
-
-/* .banner:hover{
-    opacity: 1;
-} */
-
 .img-fluid {
     max-width: 100%;
     height: auto;
@@ -74,7 +73,17 @@ nav ul a{
 }
 
 /* Mdeia Queries */
-
+@media only screen and (min-width: 1200px){
+p{
+    font-size: 22px;
+}
+ol.basics{
+    font-size: 20px;
+}
+ul.basics{
+    font-size: 20px;
+}     
+}
 @media (min-width: 768px){
 .recipe-pic {
     display: block;
@@ -93,8 +102,3 @@ nav ul a{
     margin: auto;
 }
 }
-/* @media (max-width: 480px){
-.input-field{
-    display: block;
-}
-} */

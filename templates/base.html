@@ -24,6 +24,7 @@
             <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars green-text"></i></a>
             <ul class="right hide-on-med-and-down">
                 <li><a href="{{ url_for('home')}}">Home</a></li>
+                <li><a href="{{ url_for('basics')}}">Basics</a></li>
                 <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
                 <li><a href="#">Shop</a></li>
                 <li><a href="#">About</a></li>
@@ -42,6 +43,7 @@
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align green-text text-darken-2">High Cuisine</h4></li>
             <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
+            <li><a href="{{ url_for('basics')}}">Basics</a></li>
             <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
             <li><a href="#">Shop</a></li>
             <li><a href="#">About</a></li>
