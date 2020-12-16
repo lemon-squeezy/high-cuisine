@@ -7,7 +7,7 @@
 }
 
 .btn-small{
-    margin: 5px;
+    margin-top: 10px;
 }
 
 .collapsible-header .col strong{
@@ -45,14 +45,15 @@ nav ul a{
     position: relative;
     top: 0;
     left: 0;
-    opacity: 0.5;
+    max-height: 350px;
+    opacity: 0.9;
     z-index: 1;
-    transition:opacity 500ms ease-out;
+    /* transition:opacity 500ms ease-out; */
 }
 
-.banner:hover{
+/* .banner:hover{
     opacity: 1;
-}
+} */
 
 .img-fluid {
     max-width: 100%;
@@ -61,9 +62,9 @@ nav ul a{
 }
 .inner-logo{
     position: absolute;
-    top: 10%;
-    left: 42%;
-    max-width: 15vw;
+    top: 8%;
+    left: 43%;
+    max-width: 14vw;
     z-index: 2;
 }
 
@@ -82,12 +83,12 @@ nav ul a{
     width: 50%;
 }
 .recipe-card{
-    height: 400px;
+    height: 350px;
     margin-top: 2rem;
 }
-.card-img{
+.card .card-image img {
+    height: 120px;
     width: 85%;
-    min-height: 120px;
     overflow: hidden;
     margin: auto;
 }
