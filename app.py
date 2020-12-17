@@ -30,6 +30,7 @@ def get_recipes():
 def home():
     return render_template("index.html")
 
+
 @app.route("/basics")
 def basics():
     return render_template("basics.html")
