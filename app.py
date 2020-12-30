@@ -36,6 +36,11 @@ def basics():
     return render_template("basics.html")
 
 
+@app.route("/shop")
+def shop():
+    return render_template("shop.html")
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")

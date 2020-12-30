@@ -94,6 +94,13 @@ ul.basics:not(.browser-default)>li{
     margin-left: 2.5rem;
 }
 
+.page-footer{
+    background-color: #369956;
+}
+.page-footer li a:last-child{
+    background-color: red;
+}
+
 /* Mdeia Queries */
 /* @media only screen and (min-width: 1200px){
 } */
