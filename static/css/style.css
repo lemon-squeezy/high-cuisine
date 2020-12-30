@@ -10,6 +10,22 @@ html {
 .flashes h4{
     line-height: 2;
 }
+.general-green{
+    color: #369956;
+}
+
+/* Buttons */
+.topbutton { 
+    position:fixed;
+    right:10px; 
+    bottom:10px; 
+    z-index:1; 
+}
+
+i.fas.fa-arrow-circle-up { 
+    font-size: -webkit-xxx-large;
+    color: #369956;
+}
 
 .btn-small{
     margin-top: 10px;
@@ -72,9 +88,7 @@ nav ul a{
 }
 
 /* Overriding Materialize-Styles */
-.card-panel{
-    margin: auto;
-}
+
 ul.basics:not(.browser-default)>li{
     list-style-type: disc;
     margin-left: 2.5rem;
@@ -83,7 +97,14 @@ ul.basics:not(.browser-default)>li{
 /* Mdeia Queries */
 /* @media only screen and (min-width: 1200px){
 } */
-
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+  h2 {
+    font-size: 2.2rem;
+  }
+}
 @media (min-width: 768px){
 .recipe-pic {
     display: block;
@@ -92,7 +113,6 @@ ul.basics:not(.browser-default)>li{
     width: 50%;
 }
 .recipe-card{
-    height: 350px;
     margin-top: 2rem;
 }
 .card .card-image img {

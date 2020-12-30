@@ -9,29 +9,26 @@
 </section>
 
 <!-- Rectipe Details -->
-<section class="row recipe_details">
-  <div class="col s12 recipe-info-text">
+<section class="row">
+  <div class="col s12 card-panel">
         <!-- Recipe Image -->
-    <div class="card-panel">
-      <img class="responsive-img recipe-pic" src="{{ recipe.img_url }}"alt="image of {{ recipe.recipe_name }}"/>
-    </div>
-    <div class="card-panel">
+    
+      <img class="responsive-img recipe-pic" src="{{ recipe.img_url }}"alt="image of {{ recipe.recipe_name }}">
+    
+    <div class="col s12 m6 offset-m3">
       <h2>Ingredients</h2>
       {% for ingredient in recipe.recipe_ingredients.splitlines() %}
-      <p>{{ ingredient }}</p>
+            <p> <i class="fas fa-cannabis"></i>{{ ingredient }}</p>
       {% endfor %}
       <h2>Method</h2>
       {% for method in recipe.recipe_method.splitlines() %}
       <p>{{ method }}</p>
       {% endfor %}
-      <div id="recipe-by">
-        <h5>Recipe posted by:</h5>
-        <p>{{ recipe.created_by }}</p>
-        <h5>Recipe posted on:</h5>
-        <p>{{ recipe.date_added }}</p>
+      <div id="col s6 center-align">
+        <h6>posted on: {{ recipe.date_added }} by {{ recipe.created_by }}</h6>
         <!-- Share Buttons, from sharethis.com -->
-        <h5>Share this recipe</h5>
-        <div class="sharethis-inline-share-buttons"></div>
+            <h5>Share this recipe:</h5>
+        <div class=" row sharethis-inline-share-buttons"></div>
       </div>
     </div>
   </div>
