@@ -88,6 +88,9 @@ nav ul a{
 }
 
 /* Overriding Materialize-Styles */
+h1,h2,h3,h4,h5,h6{
+    color: #369956;
+}
 
 ul.basics:not(.browser-default)>li{
     list-style-type: disc;
