@@ -27,7 +27,6 @@
                 <li><a href="{{ url_for('basics')}}">Basics</a></li>
                 <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
                 <li><a href="{{ url_for('shop')}}">Shop</a></li>
-                <li><a href="#">About</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
                     <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
@@ -46,7 +45,6 @@
             <li><a href="{{ url_for('basics')}}">Basics</a></li>
             <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
             <li><a href="{{ url_for('shop')}}">Shop</a></li>
-            <li><a href="#">About</a></li>
                 {% if session.user %}
                     <li><a href="{{ url_for('add_recipe')}}">Add Recipe</a></li>
                     <li><a href="{{ url_for('profile', username=session['user'])}}">Profile</a></li>
@@ -59,7 +57,6 @@
             <!--- BANNER -->
         <div class="wrapper img-fluid">
             <img class="banner img-fluid" src="{{ url_for('static', filename='css/images/banner_christmas.jpg') }}" alt="High Cuisine"/>
-            <!-- <img class="banner img-fluid" src="https://res.cloudinary.com/digsjo3yh/image/upload/v1607875764/banner_buksop.jpg"> -->
             <img class="inner-logo img-fluid" src="{{ url_for('static', filename='css/images/logo-wb.png') }}" alt="High Cuisine"/>
             
         </div>

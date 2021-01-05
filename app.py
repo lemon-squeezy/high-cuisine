@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 from datetime import datetime
 if os.path.exists("env.py"):
     import env
@@ -18,6 +19,21 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+# --- Date Variable --- #
+current_date = datetime.today().strftime('%d.%m.%Y')
+
+
+# throws users that are not logged in to Login page if they try to access certain pages
+
+def login_required(f):
+    @wraps(f)
+    def wrap(*args, **kwargs):
+        if 'user' in session:
+            return f(*args, **kwargs)
+        else:
+            flash('You need to login first.')
+            return redirect(url_for('login'))
+    return wrap
 
 @app.route("/")
 @app.route("/get_recipes")
@@ -57,10 +73,11 @@ def register():
             {"username": request.form.get("username").lower()})
 
         if existing_user:
-            flash("Username already exists")
+            flash("Username already exists - Try another one!")
             return redirect(url_for("register"))
 
         register = {
+            "email": request.form.get("email").lower(),
             "username": request.form.get("username").lower(),
             "password": generate_password_hash(request.form.get("password"))
         }
@@ -85,11 +102,11 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                        request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password match
                 flash("Incorrect Username and/or Password")
@@ -122,10 +139,12 @@ def logout():
     return redirect(url_for("login"))
 
 
+# ---- RECIPE PAGES ----- #
+
 @app.route("/add_recipe", methods=["GET", "POST"])
+@login_required
 def add_recipe():
     if request.method == "POST":
-        current_date = datetime.today().strftime('%d.%m.%Y')
         recipe = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
@@ -145,9 +164,9 @@ def add_recipe():
 
 
 @app.route("/edit_recipe/<recipe_id>", methods=["GET", "POST"])
+@login_required
 def edit_recipe(recipe_id):
     if request.method == "POST":
-        current_date = datetime.today().strftime('%d.%m.%Y')
         submit = {
             "category_name": request.form.get("category_name"),
             "recipe_name": request.form.get("recipe_name"),
@@ -167,6 +186,7 @@ def edit_recipe(recipe_id):
 
 # Delete Recipe
 @app.route("/delete_recipe/<recipe_id>")
+@login_required
 def delete_recipe(recipe_id):
     mongo.db.recipes.remove({"_id": ObjectId(recipe_id)})
     flash("Recipe Successfully Deleted")
@@ -180,6 +200,9 @@ def view_recipe(recipe_id):
     recipe = mongo.db.recipes.find_one({"_id": ObjectId(recipe_id)})
     return render_template("view_recipe.html", recipe=recipe)
 
+@ app.route('/terms')
+def terms():
+    return render_template("terms.html")
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),

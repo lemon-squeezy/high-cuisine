@@ -35,9 +35,6 @@ i.fas.fa-arrow-circle-up {
     margin: 5px;
     line-height: 42px;
 }
-/* ul.ingredients{
-    list-style-type: disc !important;
-} */
 
 /* Modal */
 
@@ -87,6 +84,44 @@ nav ul a{
     z-index: 2;
 }
 
+/* Home */
+.main-image {
+  position: relative;
+  text-align: center;
+}
+
+#main-image-text {
+  position: absolute;
+  top: 8px;
+  left: 15px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-right: 70px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px 20px;
+}
+/* Side Image */
+
+.homepage-sml-img {
+  position: relative;
+  text-align: center;
+}
+
+.small-image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+}
+
+#bottom-right-image {
+  margin-top: 15px;
+}
+
 /* Overriding Materialize-Styles */
 h1,h2,h3,h4,h5,h6{
     color: #369956;
@@ -99,10 +134,12 @@ ul.basics:not(.browser-default)>li{
 
 .page-footer{
     background-color: #369956;
+    padding-bottom: 0.2rem;
 }
-.page-footer li a:last-child{
-    background-color: red;
-}
+/* [type="checkbox"]:checked+span:not(.lever):before{
+    border-bottom: #369956;
+    border-right: #369956;
+} */
 
 /* Mdeia Queries */
 /* @media only screen and (min-width: 1200px){

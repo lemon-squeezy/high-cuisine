@@ -1,5 +1,48 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- Main Homepage Image -->
+<section class="row main-image-row">
+  <div class="col m8 s12 main-image">
+    <img class="responsive-img" src="{{ url_for('static', filename='css/images/main.image-left.jpg') }}" alt="Image of some vegetables"/>
+    <div id="main-image-text" class="left-align">
+      <h3>Tasty cannabis based recipes</h3>
+      <h4>Cook, Submit, Share</h4>
+      <a
+        href="{{ url_for('get_recipes') }}"
+        class="waves-effect waves-light btn banner-button green lighten-2 header-btn"
+        >Find a Recipe</a
+      >
+    </div>
+  </div>
+
+  <!-- Top right Image Box - top -->
+  <aside class="col m4 s6 homepage-sml-img">
+    <a href="{{ url_for('register') }}"
+      ><img
+        class="responsive-img"
+        src="{{ url_for('static', filename='css/images/home_top_right.jpg') }}"
+        alt="Image of different spices"
+      />
+      <div class="small-image-text center-align">
+        <h5>Sign up and publish your own recipes</h5>
+      </div>
+    </a>
+  </aside>
+
+  <!-- Top right Image Box - bottom -->
+  <aside class="col m4 s6 homepage-sml-img" id="bottom-right-image">
+    <a href="{{ url_for('shop') }}">
+      <img
+        class="responsive-img"
+        src="{{ url_for('static', filename='css/images/home_bottom_right.jpg') }}"
+        alt="Image of a kitchen"
+      />
+      <div class="small-image-text center-align">
+        <h5>Have a look for our products</h5>
+      </div>
+    </a>
+  </aside>
+</section>
     <div class="container">
         <h3 class="green-text text-darken-2 center-align">Let yourself be enchanted by our delicious recipes.</h3>
         <div class="divider"></div>
