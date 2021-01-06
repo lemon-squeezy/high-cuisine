@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>404</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/errors.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" /> 
+    </head>
+    <body>
+        <div class="container">
+            <div class="valign-wrapper">
+            <div class="row">
+                <div class="col s12 error-img">
+                    <img src="{{ url_for('static', filename='images/404.jpg') }}" alt="404" />
+                    <p class="center-align">The page you are looking for is way too high</p>
+                    <p class="center-align"><a href="{{ url_for('home') }}">Take me back home!</a></p>
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+
+</html>

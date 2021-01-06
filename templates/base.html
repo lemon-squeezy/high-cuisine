@@ -12,6 +12,7 @@
         />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css" />
+        <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
         <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fd8c5465be97700184ab6d9&product=inline-share-buttons" async="async"></script>
         {% block styles %} {% endblock %}
         <title>High Cuisine</title>
@@ -24,7 +25,7 @@
                 <nav class="nav-extended white">
                     <div class="nav-wrapper">
                         <a href="{{ url_for('home') }}">
-                            <img class="logo" src="{{ url_for('static', filename='css/images/logo-nav.png') }}" alt="High Cuisine" />
+                            <img class="logo" src="{{ url_for('static', filename='images/logo-nav.png') }}" alt="High Cuisine" />
                         </a>
                         <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="fas fa-bars green-text"></i></a>
                         <ul class="right hide-on-med-and-down">
@@ -62,8 +63,8 @@
             </ul>
             <!--- BANNER -->
             <div class="wrapper img-fluid">
-                <img class="banner img-fluid" src="{{ url_for('static', filename='css/images/banner_christmas.jpg') }}" alt="High Cuisine" />
-                <img class="inner-logo img-fluid" src="{{ url_for('static', filename='css/images/logo-wb.png') }}" alt="High Cuisine" />
+                <img class="banner img-fluid" src="{{ url_for('static', filename='images/banner_christmas.jpg') }}" alt="High Cuisine" />
+                <img class="inner-logo img-fluid" src="{{ url_for('static', filename='images/logo-wb.png') }}" alt="High Cuisine" />
             </div>
         </header>
 
