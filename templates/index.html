@@ -7,22 +7,13 @@
     <div id="main-image-text" class="left-align">
       <h3>Tasty cannabis based recipes</h3>
       <h4>Cook, Submit, Share</h4>
-      <a
-        href="{{ url_for('get_recipes') }}"
-        class="waves-effect waves-light btn banner-button green lighten-2 header-btn"
-        >Find a Recipe</a
-      >
+      <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn banner-button green lighten-2 header-btn">Find a Recipe</a>
     </div>
   </div>
 
   <!-- Top right Image Box - top -->
   <aside class="col m4 s6 homepage-sml-img">
-    <a href="{{ url_for('register') }}"
-      ><img
-        class="responsive-img"
-        src="{{ url_for('static', filename='css/images/home_top_right.jpg') }}"
-        alt="Image of different spices"
-      />
+    <a href="{{ url_for('register') }}"><img class="responsive-img" src="{{ url_for('static', filename='css/images/home_top_right.jpg') }}" alt="Image of different spices"/>
       <div class="small-image-text center-align">
         <h5>Sign up and publish your own recipes</h5>
       </div>
@@ -43,17 +34,20 @@
     </a>
   </aside>
 </section>
-    <div class="container">
-        <h3 class="green-text text-darken-2 center-align">Let yourself be enchanted by our delicious recipes.</h3>
-        <div class="divider"></div>
-            <blockquote green>A recipe has no soul. <br>
-                You, as the cook, has to bring soul to the recipe!<br>
-            </blockquote>
-        <p>Thomas Keller</p>
-        <div class="divider"></div>
-        <h5>This page was created to help those suffering from chronic illnesses and thereby experience mitigation.</h5>
-    </div>
+<!-- Submit Your Own Recipe -->
+<section class="row col s12 center-align">
+  <h1>Submit your own recipe</h1>
+  <p>Do you have some cannabis based  recipes and want to share them with us?<br />
+    You just need an account and you can post away!</p>
+  {% if session.user %}
+  <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn red lighten-2 about-btn center-block">Add Recipe</a>
+  {% else %}
+  <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-small">Register</a>
+  <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small center-block">Log In</a>
+  {% endif %}
+</section>
+<section class="row col s12 center-align">
+<h5>This page was created to help those suffering from chronic illnesses and thereby experience mitigation.</h5>
+</section>
     
-
-
 {% endblock %}

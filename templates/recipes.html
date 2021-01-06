@@ -47,7 +47,7 @@
                         <div class="col s12 card-btns">
                             {% if session.user|lower == recipe.created_by|lower %}
                         <!--Edit btn-->
-                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small waves-effect waves-light green">Edit</a>
+                            <a href="{{ url_for('edit_recipe', recipe_id=recipe._id) }}" class="btn-small">Edit</a>
                         </div>
                         <!--Delete btn and modal for delete confirmation-->
                         <div class="col s12">
@@ -55,7 +55,7 @@
                             <a data-target="{{ recipe._id }}" class="btn-small waves-effect waves-light modal-trigger red">Delete</a>
                             {% else %}
                             <div class="col s12 center-align">
-                                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-small waves-effect waves-light green">Cook it!</a>
+                                <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-small">Cook it!</a>
                             </div>
                             {% endif %}
                             <!-- Modal Structure -->

@@ -16,6 +16,7 @@
 <body>
     <header>
     <!-- top navbar -->
+    <div class="navbar-fixed">
         <nav class="nav-extended white">
             <div class="nav-wrapper">
             <a href="{{ url_for('home') }}">
@@ -38,10 +39,11 @@
             </ul>
             </div>
         </nav>
+    </div>
     <!-- mobile sidenav -->
         <ul class="sidenav" id="mobile-demo">
             <li><h4 class="center-align green-text text-darken-2">High Cuisine</h4></li>
-            <li><a href="{{ url_for('get_recipes')}}">Home</a></li>
+            <li><a href="{{ url_for('home')}}">Home</a></li>
             <li><a href="{{ url_for('basics')}}">Basics</a></li>
             <li><a href="{{ url_for('get_recipes')}}">Recipes</a></li>
             <li><a href="{{ url_for('shop')}}">Shop</a></li>

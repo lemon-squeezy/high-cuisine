@@ -29,6 +29,8 @@ i.fas.fa-arrow-circle-up {
 
 .btn-small{
     margin-top: 10px;
+    background-color: #369956;
+    color: #fff;
 }
 
 .collapsible-header .col strong{
@@ -119,7 +121,7 @@ nav ul a{
 }
 
 #bottom-right-image {
-  margin-top: 15px;
+  margin-top: 12px;
 }
 
 /* Overriding Materialize-Styles */
@@ -142,14 +144,23 @@ ul.basics:not(.browser-default)>li{
 } */
 
 /* Mdeia Queries */
-/* @media only screen and (min-width: 1200px){
-} */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
   h1 {
     font-size: 2.8rem;
   }
   h2 {
     font-size: 2.2rem;
+  }
+  h3 {
+    font-size: 2rem;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  h4 {
+    font-size: 1.1rem;
+  }
+  h5 {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 768px){
@@ -167,5 +178,10 @@ ul.basics:not(.browser-default)>li{
     width: 85%;
     overflow: hidden;
     margin: auto;
+}
+}
+@media only screen and (max-width: 600px){
+.homepage-sml-img {
+    margin-top: 13px;
 }
 }
