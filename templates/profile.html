@@ -4,11 +4,29 @@
     <div class="row">
         <div class="col s12 m8 offset-m2">
             <div class="card-panel ">
-                <h3 class="center-align light-green-text text-darken-2">
+                <h3 class="center-align text-darken-2">
                     Hello {{ username }}!
                 </h3>
             </div>
         </div>
     </div>
+    <!-- <div class="row">
+        {% if recipes.count() %}
+        <h2>Your recipes:</h2>
+        <div class="row">
+            {% for recipe in recipes %}
+            <div class="col s12 card-action center-align">
+                <a href="{{url_for('get_recipe', recipe_id=recipe._id)}}" title="{{ recipe.recipe_name }}">
+                    <img src="{{recipe.image_url}}" alt="{{ recipe.recipe_name }} thumbnail">
+                    <p >{{res.title}}</p>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <h2>Nothing here yet!</h2>
+        <a href="{{ url_for('add_recipe') }}" class="btn btn-dark text-uppercase">Submit recipe</a>
+        {% endif %}
+    </div> -->
 
 {% endblock %}

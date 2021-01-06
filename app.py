@@ -36,15 +36,15 @@ def login_required(f):
     return wrap
 
 @app.route("/")
+@app.route("/home")
+def home():
+    return render_template("index.html")
+
+
 @app.route("/get_recipes")
 def get_recipes():
     recipes = list(mongo.db.recipes.find())
     return render_template("recipes.html", recipes=recipes)
-
-
-@app.route("/home")
-def home():
-    return render_template("index.html")
 
 
 @app.route("/basics")
@@ -62,7 +62,6 @@ def search():
     query = request.form.get("query")
     recipes = list(mongo.db.recipes.find({"$text": {"$search": query}}))
     return render_template("recipes.html", recipes=recipes)
-
 
 
 @app.route("/register", methods=["GET", "POST"])
@@ -203,6 +202,7 @@ def view_recipe(recipe_id):
 @ app.route('/terms')
 def terms():
     return render_template("terms.html")
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
