@@ -1,53 +1,51 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <!-- Main Homepage Image -->
 <section class="row main-image-row">
-  <div class="col m8 s12 main-image">
-    <img class="responsive-img" src="{{ url_for('static', filename='css/images/main.image-left.jpg') }}" alt="Image of some vegetables"/>
-    <div id="main-image-text" class="left-align">
-      <h3>Tasty cannabis based recipes</h3>
-      <h4>Cook, Submit, Share</h4>
-      <a href="{{ url_for('get_recipes') }}" class="waves-effect waves-light btn banner-button green lighten-2 header-btn">Find a Recipe</a>
+    <div class="col m8 s12 main-image">
+        <img class="responsive-img" src="{{ url_for('static', filename='css/images/main.image-left.jpg') }}" alt="Image of some vegetables" />
+        <div id="main-image-text" class="left-align">
+            <h3>Tasty cannabis based recipes</h3>
+            <h4>Cook, Submit, Share</h4>
+            <a href="{{ url_for('recipes') }}" class="waves-effect waves-light btn-small banner-button header-btn">Find a Recipe</a>
+        </div>
     </div>
-  </div>
 
-  <!-- Top right Image Box - top -->
-  <aside class="col m4 s6 homepage-sml-img">
-    <a href="{{ url_for('register') }}"><img class="responsive-img" src="{{ url_for('static', filename='css/images/home_top_right.jpg') }}" alt="Image of different spices"/>
-      <div class="small-image-text center-align">
-        <h5>Sign up and publish your own recipes</h5>
-      </div>
-    </a>
-  </aside>
+    <!-- Top right Image Box - top -->
+    <aside class="col m4 s6 homepage-sml-img">
+        <a href="{{ url_for('register') }}">
+            <img class="responsive-img" src="{{ url_for('static', filename='css/images/home_top_right.jpg') }}" alt="Image of different spices" />
+            <div class="small-image-text center-align">
+                <h5>Sign up and publish your own recipes</h5>
+            </div>
+        </a>
+    </aside>
 
-  <!-- Top right Image Box - bottom -->
-  <aside class="col m4 s6 homepage-sml-img" id="bottom-right-image">
-    <a href="{{ url_for('shop') }}">
-      <img
-        class="responsive-img"
-        src="{{ url_for('static', filename='css/images/home_bottom_right.jpg') }}"
-        alt="Image of a kitchen"
-      />
-      <div class="small-image-text center-align">
-        <h5>Have a look for our products</h5>
-      </div>
-    </a>
-  </aside>
+    <!-- Top right Image Box - bottom -->
+    <aside class="col m4 s6 homepage-sml-img" id="bottom-right-image">
+        <a href="{{ url_for('shop') }}">
+            <img class="responsive-img" src="{{ url_for('static', filename='css/images/home_bottom_right.jpg') }}" alt="Image of a kitchen" />
+            <div class="small-image-text center-align">
+                <h5>Have a look for our products</h5>
+            </div>
+        </a>
+    </aside>
 </section>
 <!-- Submit Your Own Recipe -->
 <section class="row col s12 center-align">
-  <h1>Submit your own recipe</h1>
-  <p>Do you have some cannabis based  recipes and want to share them with us?<br />
-    You just need an account and you can post away!</p>
-  {% if session.user %}
-  <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn red lighten-2 about-btn center-block">Add Recipe</a>
-  {% else %}
-  <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-small">Register</a>
-  <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small center-block">Log In</a>
-  {% endif %}
+    <h1>Submit your own recipe</h1>
+    <p>
+        Do you have some cannabis based recipes and want to share them with us?<br />
+        You just need an account and you can post away!
+    </p>
+    {% if session.user %}
+    <a href="{{ url_for('add_recipe') }}" class="waves-effect waves-light btn-small lighten-2 about-btn center-block">Add Recipe</a>
+    {% else %}
+    <a href="{{ url_for('register') }}" class="waves-effect waves-light btn-small">Register</a>
+    <a href="{{ url_for('login') }}" class="waves-effect waves-light btn-small center-block">Log In</a>
+    {% endif %}
 </section>
 <section class="row col s12 center-align">
-<h5>This page was created to help those suffering from chronic illnesses and thereby experience mitigation.</h5>
+    <h5>This page was created to help those suffering from chronic illnesses and thereby experience mitigation.</h5>
 </section>
-    
+
 {% endblock %}

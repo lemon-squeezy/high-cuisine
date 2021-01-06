@@ -1,40 +1,36 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 <section class="container center-align">
-  <div class="row">
-    <div class="col s12">
-      <h1>"{{ recipe.recipe_name }}"</h1>
+    <div class="row">
+        <div class="col s12">
+            <h1>"{{ recipe.recipe_name }}"</h1>
+        </div>
     </div>
-  </div>
 </section>
 
 <!-- Recipe Details -->
 <section class="row">
-  <div class="col s12 card-panel">
+    <div class="col s12 card-panel">
         <!-- Recipe Image -->
-    
-      <img class="responsive-img recipe-pic" src="{{ recipe.img_url }}"alt="image of {{ recipe.recipe_name }}">
-    
-    <div class="col s12 m6 offset-m3">
-      <h2>Ingredients</h2>
-      {% for ingredient in recipe.recipe_ingredients.splitlines() %}
-            <p> <i class="fas fa-cannabis"></i>{{ ingredient }}</p>
-      {% endfor %}
-      <h2>Method</h2>
-      {% for method in recipe.recipe_method.splitlines() %}
-      <p>{{ method }}</p>
-      {% endfor %}
-      <div id="col s6 center-align">
-        <h6>posted on: {{ recipe.date_added }} by {{ recipe.created_by }}</h6>
-        <!-- Share Buttons, from sharethis.com -->
-            <h5>Share this recipe:</h5>
-        <div class=" row sharethis-inline-share-buttons"></div>
-      </div>
+
+        <img class="responsive-img recipe-pic" src="{{ recipe.img_url }}" alt="image of {{ recipe.recipe_name }}" />
+
+        <div class="col s12 m6 offset-m3">
+            <h2>Ingredients</h2>
+            {% for ingredient in recipe.recipe_ingredients.splitlines() %}
+            <p><i class="fas fa-cannabis"></i>{{ ingredient }}</p>
+            {% endfor %}
+            <h2>Method</h2>
+            {% for method in recipe.recipe_method.splitlines() %}
+            <p>{{ method }}</p>
+            {% endfor %}
+            <div id="col s6 center-align">
+                <h6>posted on: {{ recipe.date_added }} by {{ recipe.created_by }}</h6>
+                <!-- Share Buttons, from sharethis.com -->
+                <h5>Share this recipe:</h5>
+                <div class="row sharethis-inline-share-buttons"></div>
+            </div>
+        </div>
     </div>
-  </div>
-
-
-
 </section>
 
 {% endblock %}

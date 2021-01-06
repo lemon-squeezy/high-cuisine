@@ -32,6 +32,9 @@ i.fas.fa-arrow-circle-up {
     background-color: #369956;
     color: #fff;
 }
+.btn-large{
+background-color: #369956;
+}
 
 .collapsible-header .col strong{
     margin: 5px;
@@ -133,6 +136,9 @@ ul.basics:not(.browser-default)>li{
     list-style-type: disc;
     margin-left: 2.5rem;
 }
+main.container{
+    min-height: calc(100vh - 350px);
+} 
 
 .page-footer{
     background-color: #369956;
@@ -175,9 +181,9 @@ ul.basics:not(.browser-default)>li{
 }
 .card .card-image img {
     height: 120px;
-    width: 85%;
     overflow: hidden;
     margin: auto;
+    object-fit: cover;
 }
 }
 @media only screen and (max-width: 600px){

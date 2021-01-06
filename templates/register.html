@@ -1,61 +1,54 @@
-{% extends "base.html" %}
-{% block content %}
+{% extends "base.html" %} {% block content %}
 
-    <h3 class="center-align">Register</h3>
-
-    <div class="row">
-        <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
-            <div class="card-panel ">
-                <!-- Email -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-envelope prefix general-green"></i>
-                        <input id="email" name="email" type="email" class="validate" autocomplete="off" required>
-                        <label for="email">Email</label>
-                    </div>
-                </div>
-                <!-- username -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-plus prefix general-green"></i>
-                        <input id="username" name="username" type="text" minlength="5"
-                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="username">Username</label>
-                    </div>
-                </div>
-                <!-- password -->
-                <div class="row">
-                    <div class="input-field col s12">
-                        <i class="fas fa-user-lock prefix general-green"></i>
-                        <input id="password" name="password" type="password" minlength="5"
-                            maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required>
-                        <label for="password">Password</label>
-                    </div>
-                </div>
-                <!-- Disclaimer -->
-                <div class="row">
-                    <p>
-                        <label><input type="checkbox" required/><span>By registering I agree to
-                                <a href="{{url_for('terms')}}" class="general-green">terms and conditions</a></span>
-                        </label>
-                    </p>
-                </div>
-                <!-- register -->
-                <div class="row">
-                    <button type="submit" class="col s12 btn-large green darken-2 text-shadow">
-                        Register <i class="fas fa-sign-in-alt"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
+<h3 class="center-align">Register</h3>
 
 <div class="row">
-        <div class="col s12">
-            <p class="center-align">
-            Already Registered? <a href="{{ url_for('login')}}" class="light-green-text text darken-2">Log In</a>
-            </p>
+    <form class="col s12 m8 offset-m2" method="POST" action="{{ url_for('register') }}">
+        <div class="card-panel">
+            <!-- Email -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-envelope prefix general-green"></i>
+                    <input id="email" name="email" type="email" class="validate" autocomplete="off" required />
+                    <label for="email">Email</label>
+                </div>
+            </div>
+            <!-- username -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-plus prefix general-green"></i>
+                    <input id="username" name="username" type="text" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required />
+                    <label for="username">Username</label>
+                </div>
+            </div>
+            <!-- password -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-user-lock prefix general-green"></i>
+                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required />
+                    <label for="password">Password</label>
+                </div>
+            </div>
+            <!-- Disclaimer -->
+            <div class="row">
+                <p>
+                    <label>
+                        <input type="checkbox" required /><span>By registering I agree to <a href="{{url_for('terms')}}" class="general-green">terms and conditions</a></span>
+                    </label>
+                </p>
+            </div>
+            <!-- register -->
+            <div class="row">
+                <button type="submit" class="col s12 btn-large white-text darken-2 text-shadow">Register <i class="fas fa-sign-in-alt"></i></button>
+            </div>
         </div>
+    </form>
+</div>
+
+<div class="row">
+    <div class="col s12">
+        <p class="center-align">Already Registered? <a href="{{ url_for('login')}}" class="light-green-text text darken-2">Log In</a></p>
     </div>
+</div>
 
 {% endblock %}
