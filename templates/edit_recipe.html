@@ -23,8 +23,16 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-pencil-alt green-text text-darken-2 prefix"></i>
-                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="50" value="{{ recipe.recipe_name }}" type="text" class="validate" required />
+                <input id="recipe_name" name="recipe_name" minlength="5" maxlength="60" value="{{ recipe.recipe_name }}" type="text" class="validate" required />
                 <label for="recipe_name">Recipe Name</label>
+            </div>
+        </div>
+        <!-- Preparation Time -->
+        <div class="row">
+            <div class="input-field inline col s12">
+                <i class="fas fa-clock general-green prefix"></i>
+                <input id="recipe_time" name="recipe_time" type="text" minlength="1" maxlength="3" value="{{ recipe.recipe_time }}" class="validate" required />
+                <label for="recipe_time">Preparation Time (mins)</label>
             </div>
         </div>
         <!-- Recipe Ingredients -->
@@ -51,7 +59,7 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-image green-text text-darken-2 prefix"></i>
-                    <input id="img_url" name="img_url" type="text" minlength="5" pattern="https://.*" class="validate lazyload" required />
+                    <input id="img_url" name="img_url" type="text" minlength="5" pattern="https://.*" class="validate lazyload" value="{{ recipe.img_url }}" required />
                     <label for="img_url">{{ recipe.image_url }}</label>
                     <span class="helper-text" data-error="wrong" data-success="right">{{ recipe.img_url }}</span>
                 </div>
@@ -61,7 +69,7 @@
         <div class="row">
             <div class="col s12 center-align">
                 <!-- Cancel Button -->
-                <a href="{{ url_for('get_recipes') }}" class="btn-large red text-shadow"> Cancel <i class="fas fa-times-circle right"></i> </a>
+                <a href="{{ url_for('recipes') }}" class="btn-large red text-shadow"> Cancel <i class="fas fa-times-circle right"></i> </a>
                 <!-- Delete Button -->
                 <a href="#delete-modal" class="btn-large red accent-4 text-shadow modal-trigger"> Delete Recipe <i class="fas fa-trash right"></i> </a>
                 <button type="submit" class="btn-large green darken-2 text-shadow">Update Recipe <i class="fas fa-edit right"></i></button>

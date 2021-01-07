@@ -13,6 +13,9 @@ html {
 .general-green{
     color: #369956;
 }
+h1, h2, h3, h4, h5, h6{
+    color: #369956;
+}
 
 /* Buttons */
 .topbutton { 
@@ -32,6 +35,7 @@ i.fas.fa-arrow-circle-up {
     background-color: #369956;
     color: #fff;
 }
+
 .btn-large{
 background-color: #369956;
 }
@@ -139,7 +143,9 @@ ul.basics:not(.browser-default)>li{
 main.container{
     min-height: calc(100vh - 350px);
 } 
-
+.card{
+    min-height: 350px;
+}
 .page-footer{
     background-color: #369956;
     padding-bottom: 0.2rem;
