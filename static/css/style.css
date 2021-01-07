@@ -36,6 +36,10 @@ i.fas.fa-arrow-circle-up {
     color: #fff;
 }
 
+.btn-small:hover{
+    background-color: #fff;
+}
+
 .btn-large{
 background-color: #369956;
 }
@@ -143,17 +147,19 @@ ul.basics:not(.browser-default)>li{
 main.container{
     min-height: calc(100vh - 350px);
 } 
-.card{
-    min-height: 350px;
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+    padding: 12px;
 }
 .page-footer{
     background-color: #369956;
     padding-bottom: 0.2rem;
 }
-/* [type="checkbox"]:checked+span:not(.lever):before{
-    border-bottom: #369956;
-    border-right: #369956;
-} */
 
 /* Mdeia Queries */
 @media only screen and (max-width: 768px) {
@@ -185,6 +191,7 @@ main.container{
 .recipe-card{
     margin-top: 2rem;
 }
+
 .card .card-image img {
     height: 120px;
     overflow: hidden;

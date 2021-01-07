@@ -16,10 +16,8 @@
         <div class="row">
             {% for recipe in recipes %}
             <div class="col s12 card-action center-align">
-                <a href="{{url_for('recipes', recipe_id=recipe._id)}}" title="{{ recipe.recipe_name }}">
-                    <img src="{{recipe.image_url}}" alt="{{ recipe.recipe_name }} thumbnail" />
-                    <p>{{recipe.name}}</p>
-                </a>
+                 <a href="{{url_for('view_recipe', recipe_id=recipe._id)}}" title="{{ recipe.recipe_name }}">
+               {{recipe.recipe_name}} </a> 
             </div>
             {% endfor %}
         </div>

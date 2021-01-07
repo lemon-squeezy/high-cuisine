@@ -16,9 +16,9 @@
 
         <div class="col s12 m6 offset-m3">
             <h5>Preparation Time</h5>
-            {% for recipe_time in recipe.recipe_time %}
-            <p>{{ recipe_time }} minutes</p>
-            {% endfor %}
+    
+            <p>{{ recipe.recipe_time }} minutes</p>
+            
             <h2>Ingredients</h2>
             {% for ingredient in recipe.recipe_ingredients.splitlines() %}
             <p><i class="fas fa-cannabis"></i>{{ ingredient }}</p>

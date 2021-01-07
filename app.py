@@ -142,7 +142,7 @@ def profile():
     username = mongo.db.users.find_one({'username': session['user'
             ]})['username']
     if session['user']:
-        recipes = mongo.db.recipes.find({'username': username})
+        recipes = mongo.db.recipes.find({'created_by': username})
         return render_template('profile.html', username=username,
                                recipes=recipes)
     return redirect(url_for('login'))
@@ -238,7 +238,7 @@ def page_not_found(e):
 
 @ app.errorhandler(500)
 def internal_error(error):
-    return render_template('errors/500.html'), 500
+    return render_template('500.html'), 500
 
 
 if __name__ == '__main__':
