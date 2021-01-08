@@ -25,12 +25,33 @@
                 <label for="recipe_name">Recipe Name</label>
             </div>
         </div>
-        <!-- Preparation Time -->
+        <!-- Preparation & Cooking Time -->
         <div class="row">
-            <div class="input-field inline col s12">
+            <div class="input-field inline col s6">
                 <i class="fas fa-clock general-green prefix"></i>
-                <input id="recipe_time" name="recipe_time" type="text" minlength="1" maxlength="3" class="validate" required />
-                <label for="recipe_time">Preparation Time (mins)</label>
+                <input id="recipe_time_prep" name="recipe_time_prep" type="text" minlength="1" maxlength="3" class="validate" required />
+                <label for="recipe_time_prep">Preparation Time (mins)</label>
+            </div>
+            <div class="input-field inline col s6">
+                <i class="fas fa-clock general-green prefix"></i>
+                <input id="recipe_time_cook" name="recipe_time_cook" type="text" minlength="1" maxlength="3" class="validate" required />
+                <label for="recipe_time_cook">Cooking Time (mins)</label>
+            </div>
+        </div>
+        <!-- Amount of Servings & Difficulty -->
+        <div class="row">
+            <div class="input-field inline col s6">
+                <i class="fas fa-pizza-slice general-green prefix"></i>
+                <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="2" class="validate" required />
+                <label for="recipe_serves">How many servings?</label>
+            </div>
+            <div class="input-field col s6" id="recipe_difficulty">
+                <select>
+                <option value="" disabled selected>Which difficulty?</option>
+                <option value="1">Easy</option>
+                <option value="2">Medium</option>
+                <option value="3">Challenging</option>
+                </select>
             </div>
         </div>
         <!-- Recipe Ingredients -->

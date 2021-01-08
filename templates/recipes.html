@@ -11,8 +11,8 @@
                 <label for="query">Search Recipes</label>
             </div>
             <div class="col s12">
-                <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
                 <button type="submit" class="green darken-1 btn text-shadow"><i class="fas fa-search left"></i> Search</button>
+                <a href="{{ url_for('recipes') }}" class="red btn text-shadow">Reset</a>
             </div>
         </div>
     </form>
@@ -62,8 +62,8 @@
                                     </div>
                                     <div class="modal-footer">
                                         <div class="col s12 center-align">
-                                            <a href="#" class="modal-close btn modal-del-btns red">cancel</a>
                                             <a href="{{ url_for('delete_recipe', recipe_id=recipe._id) }}" class="btn modal-del-btns green">Confirm</a>
+                                            <a href="#" class="modal-close btn modal-del-btns red">Cancel</a>  
                                         </div>
                                     </div>
                                 </div>

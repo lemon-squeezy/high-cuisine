@@ -76,7 +76,9 @@ nav ul a{
     position: relative;
     top: 0;
     left: 0;
+    margin-bottom: 0.8rem;
 }
+
 .banner{
     position: relative;
     top: 0;
@@ -136,7 +138,13 @@ nav ul a{
 #bottom-right-image {
   margin-top: 12px;
 }
-
+/* Recipe View */
+.recipe-info{
+    background: rgb(241, 237, 237);
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 /* Overriding Materialize-Styles */
 h1,h2,h3,h4,h5,h6{
     color: #369956;

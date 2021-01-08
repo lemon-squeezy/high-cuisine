@@ -3,6 +3,7 @@
     <div class="row">
         <div class="col s12">
             <h1>"{{ recipe.recipe_name }}"</h1>
+            <h4>- {{ recipe.category_name }} -</h4>
         </div>
     </div>
 </section>
@@ -15,10 +16,28 @@
         <img class="responsive-img recipe-pic" src="{{ recipe.img_url }}" alt="image of {{ recipe.recipe_name }}" />
 
         <div class="col s12 m6 offset-m3">
-            <h5>Preparation Time</h5>
-    
-            <p>{{ recipe.recipe_time }} minutes</p>
             
+                <div class="row recipe-info">
+                    <div class="col s6 l3">
+                        <h6>PREP TIME:</h6>
+                        <p>{{ recipe.recipe_time_prep }} mins</p>
+                    </div>
+                    <div class="col s6 l3">
+                        <h6>COOK TIME:</h6>
+                        <p>{{ recipe.recipe_time_cook }} mins</p>
+                    </div>
+                     <div class="col s6 l3">
+                        <h6>SERVES:</h6>
+                        <p>{{ recipe.recipe_serves }} servings</p>
+                    </div> 
+                    <div class="col s6 l3">
+                        <h6>DIFFICULTY:</h6>
+                        <p>{{ recipe.recipe_difficulty }}</p>
+                    </div>
+                </div>
+            
+        </div>
+        <div class="col s12">
             <h2>Ingredients</h2>
             {% for ingredient in recipe.recipe_ingredients.splitlines() %}
             <p><i class="fas fa-cannabis"></i>{{ ingredient }}</p>
