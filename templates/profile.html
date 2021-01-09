@@ -1,23 +1,21 @@
 {% extends "base.html" %} {% block content %}
 
+<h3 class="center-align">Hello {{ username }}!</h3>
 <div class="row">
+    
     <div class="col s12 m8 offset-m2">
-        <div class="card-panel">
-            <h3 class="center-align text-darken-2">
-                Hello {{ username }}!
-            </h3>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col s12 m8 offset-m2 center-align">
-        {% if recipes.count() %}
-        <h2>Your recipes:</h2>
-        <div class="row">
+        <div class="card-panel ">
+            
+            <div class="row">
+    <div class="col s12 ">
+        
+        <div class="row container">
+            {% if recipes.count() %}
+        <h4>This are your recipes:</h4>
             {% for recipe in recipes %}
-            <div class="col s12 offset-m4 left-align">
+            <div class="col s12 left-align">
                  <a class="profile " href="{{url_for('view_recipe', recipe_id=recipe._id)}}" title="{{ recipe.recipe_name }}">
-               {{recipe.recipe_name}} </a> 
+               <i class="fas fa-cannabis"></i>{{recipe.recipe_name}} </a> 
             </div>
             {% endfor %}
         </div>
@@ -26,6 +24,11 @@
         <a href="{{ url_for('add_recipe') }}" class="btn btn-small text-uppercase">Submit recipe</a>
         {% endif %}
     </div>
+    </div> 
+        </div>
+    </div>
 </div>
+
+
 
 {% endblock %}

@@ -30,20 +30,28 @@ i.fas.fa-arrow-circle-up {
     color: #369956;
 }
 
-.btn-small{
+.btn, .btn-small, .btn-large{
     margin-top: 10px;
     background-color: #369956;
     color: #fff;
     transition-duration: 0.4s;
 }
 
-.btn-small:hover{
+.btn:hover, .btn-small:hover, .btn-large:hover{
     background-color: #fff;
     color: #369956;
 }
 
-.btn-large{
-background-color: #369956;
+.btn-red {
+    margin-top: 10px;
+    background-color: #F74B2C;
+    color: #fff;
+    transition-duration: 0.4s;
+}
+
+.btn-red:hover {
+    background-color: #fff;
+    color: #F74B2C;
 }
 
 .collapsible-header .col strong{
@@ -138,17 +146,16 @@ nav ul a{
 #bottom-right-image {
   margin-top: 12px;
 }
+
 /* Recipe View */
 .recipe-info{
-    background: rgb(241, 237, 237);
+    margin-top: 10px;
     text-align: center;
     padding-left: 10px;
     padding-right: 10px;
 }
+
 /* Overriding Materialize-Styles */
-h1,h2,h3,h4,h5,h6{
-    color: #369956;
-}
 .fas{
     margin-right: 5px;
 }
@@ -162,7 +169,7 @@ main.container{
 } 
 
 .card-content{
-    min-height: 231px;
+    min-height: 235px; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -178,6 +185,10 @@ a.profile{
     color: #369956;
     font-size: 1.2rem;
 }
+.input-field:active{
+    color: purple;
+}
+
 
 /* Mdeia Queries */
 @media only screen and (max-width: 768px) {
@@ -206,9 +217,9 @@ a.profile{
     margin-right: auto;
     width: 50%;
 }
-.recipe-card{
+/* .recipe-card{
     margin-top: 2rem;
-}
+} */
 
 .card .card-image img {
     height: 120px;
