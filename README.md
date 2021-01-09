@@ -31,7 +31,7 @@ As an admin I would like to do all of the above plus:
 - [x] Be able to access, edit and delete ALL recipes from admin profile
 
 ### Design
-Main inspiration for the main page comes from Meatblog site. After talking to a chronically ill friend, I decided on a cannabis-based recipe website.
+Main inspiration for the home page comes from Meatblog site. After talking to a chronically ill friend, I decided on a cannabis-based recipe website.
 
 Since the color green is associated with cannabis, it was easy to decide on a color scheme. All elements except the delete buttons are displayed in a uniform green. The logo and favicon were designed with Adobe Illustrator. It includes a cannabis leaf and a chef's hat. I kept the default font-style of Materialize because it provides a good readability and looks modern.
 
@@ -42,3 +42,5 @@ There are tons of recipe websites out there. However, most of them are packed wi
 Using the user stories above, I put together the wireframes using Balsamiq. The wireframes covered desktop, tablet and mobile formats. Due to the navigation items changing depending on whether a user is signed in or not, a number of additional wireframes were needed to be created to show the difference. For example, when a user is not signed in to the site, they cannot view the ‘Add Recipe’ page and can see buttons in the main navigation for Register and Sign In. When a user has registered/signed into the site, these buttons are hidden and ‘Sign Out’ becomes visible, as does ‘Add a Recipe'.
 
 [You can view all of the wireframes here][all_wireframes.pdf](https://github.com/lemon-squeezy/high-cuisine/files/5791535/all_wireframes.pdf)
+Test Test
+### TEST
