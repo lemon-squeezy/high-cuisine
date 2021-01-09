@@ -31,6 +31,7 @@ As an admin I would like to do all of the above plus:
 - [x] Be able to access, edit and delete ALL recipes from admin profile
 
 ### Design
+<<<<<<< HEAD
 Main inspiration for the home page comes from Meatblog site. After talking to a chronically ill friend, I decided on a cannabis-based recipe website.
 
 Since the color green is associated with cannabis, it was easy to decide on a color scheme. All elements except the delete buttons are displayed in a uniform green. The logo and favicon were designed with Adobe Illustrator. It includes a cannabis leaf and a chef's hat. I kept the default font-style of Materialize because it provides a good readability and looks modern.
@@ -44,3 +45,23 @@ Using the user stories above, I put together the wireframes using Balsamiq. The 
 [You can view all of the wireframes here][all_wireframes.pdf](https://github.com/lemon-squeezy/high-cuisine/files/5791535/all_wireframes.pdf)
 Test Test
 ### TEST
+=======
+
+Main inspiration for the main page comes from [Meatblog](http://meatblog.herokuapp.com/) site. 
+After talking to a chronically ill friend, I decided on a cannabis-based recipe website.
+
+Since the color green is associated with cannabis, it was easy to decide on a color scheme.
+All elements except the delete buttons are displayed in a uniform green.
+The logo and favicon were designed with Adobe Illustrator. It includes a cannabis leaf and a chef's hat.
+I kept the default font-style of Materialize because it provides a good readability and looks modern.
+
+#### Research
+
+There are tons of recipe websites out there. However, most of them are packed with too much information. 
+Most cannabis recipe sites didn't specialize in this. They only contained links to individual recipes with cannabis.
+
+#### Wireframes
+Using the user stories above, I put together the wireframes using Balsamiq. The wireframes covered desktop, tablet and mobile formats.
+Due to the navigation items changing depending on whether a user is signed in or not, a number of additional wireframes were needed to be created to show the difference. For example, when a user is not signed in to the site, they cannot view the ‘Add Recipe’ page and can see buttons in the main navigation for Register and Sign In.
+When a user has registered/signed into the site, these buttons are hidden and ‘Sign Out’ becomes visible, as does ‘Add a Recipe'.
+>>>>>>> 09ca7d9978f332e030ef86b048fe0167f1b8be66
