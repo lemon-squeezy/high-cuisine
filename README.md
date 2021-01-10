@@ -43,3 +43,14 @@ Using the user stories above, I put together the wireframes using Balsamiq. The 
 
 ##### Wireframes for desktop
 [View all wireframes here](static/readme_docs/desktop_wireframes.pdf)
+
+##### Wireframes for desktop
+##### Wireframes for desktop
+
+#### Color Palette
+
+I kept the color pallette very simple and clean because the content of the uploaded recipes is very colorful.
+The main color is Spanish Green #2B934D and simple white #FFF. It"s used for the logo, buttons, headings and some text.
+Orange Soda #F74B2C is used for buttons like: Delete, Edit ...
+
+![Color Palette](static/readme_docs/Color_Palette.png)

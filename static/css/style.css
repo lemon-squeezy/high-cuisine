@@ -92,7 +92,6 @@ nav ul a{
     top: 0;
     left: 0;
     min-height: 70px;
-    max-height: 500px;
     opacity: 0.9;
     z-index: 1;
 }
@@ -103,7 +102,7 @@ nav ul a{
 }
 .inner-logo{
     position: absolute;
-    top: 8%;
+    top: 14%;
     left: 43%;
     max-width: 14vw;
     z-index: 2;
@@ -184,7 +183,7 @@ main.container{
 }
 a.profile{
     color: #369956;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .input-field:active{
     color: purple;
