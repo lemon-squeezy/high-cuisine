@@ -185,10 +185,6 @@ a.profile{
     color: #369956;
     font-size: 1rem;
 }
-.input-field:active{
-    color: purple;
-}
-
 
 /* Mdeia Queries */
 @media only screen and (max-width: 768px) {

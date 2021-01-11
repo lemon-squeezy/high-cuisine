@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
+
 import os
 from flask import Flask, flash, render_template, redirect, request, \
     session, url_for
@@ -10,6 +11,7 @@ from werkzeug.security import generate_password_hash, \
     check_password_hash
 from functools import wraps
 from datetime import datetime
+
 if os.path.exists('env.py'):
     import env
 
@@ -37,6 +39,7 @@ def login_required(f):
         else:
             flash('You need to login first.')
             return redirect(url_for('login'))
+
     return wrap
 
 
@@ -241,12 +244,12 @@ def terms():
 
 @app.errorhandler(404)
 def page_not_found(e):
-    return render_template('404.html'), 404
+    return (render_template('404.html'), 404)
 
 
-@ app.errorhandler(500)
+@app.errorhandler(500)
 def internal_error(error):
-    return render_template('500.html'), 500
+    return (render_template('500.html'), 500)
 
 
 if __name__ == '__main__':
