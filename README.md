@@ -161,12 +161,56 @@ Devices and platforms used for testing:
 ### Validators and linters
 
 * [W3C HTML Validator](https://validator.w3.org/#validate_by_input) Passed tests without issues
-* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input)
-Passed tests without issues
-* CSS Lint VSCode extension
+* [W3C CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_input) Passed tests without issues
 * [JSHint](https://jshint.com) Passed tests without issues
 * JSHint VSCode extension
-* [PEP8](http://pep8online.com) and AUTOPEP8. Online PEP8 warns about lines being too long but when I attempted to fix that, AUTOPEP8 would break the code, otherwise no issues.
+* [PEP8](http://pep8online.com). Online PEP8 warns about lines being too long or closing bracket does not match visual indentation, otherwise no issues. I tried to use a Python formatter but the issues are still there.
 
 **PEP8 Compliance:**
 I used the website [PEP8](http://pep8online.com/) to check my app.py files complied with the PEP8 requirements. 
+
+### Manual testing
+
+1. Visiting page
+    * Test if navigation works correctly on  all devices  like phone, tablet or desktop PC
+    * Test if page is responsive at all sizes
+    * Test footer social icon links (links open homepages in a new window)
+    * Attempt accessing non-existant endpoints:
+
+       <img src="{{ url_for('static', filename='images/404.jpg') }}" alt="404" />
+        
+        Correctly returns 404.html with access to go back to homepage
+    * Verify that shop page looks as it should.
+    * Try submitting empty form or invalid email (shows tooltip "Enter an email adress")
+2. Register
+    * Try registering with empty form/inputs (shows tooltip "Fill out this field")
+    * Try to register with invalid email ("Enter an email adress")
+    * Attempt to use username/password that is too long or too short ("Match the requested format!")
+3. Login 
+    * Try using empty form (shows tooltip "Fill out this field")
+    * Try to use not existing or wrong credentials ("Incorrect Username and/or Password!")
+4. Add recipe
+    * Go to the "Add Recipe" page
+    * Try to submit empty form and verify that no recipe has been added to any category page.
+    * Try to submit filled out form and verify that fields appear correctly, there is no missing information
+    * Try to submit recipe with empty fields
+5. Edit recipe
+    * Try to submit recipe with empty fields
+    * Test edit button, submit edit button
+    * Check if changes have been made and displayed correctly
+6. Delete recipe
+    * Visit recently posted recipe and try the Delete button
+    * Delete button opens a modal.
+    * Test cancel button 
+    * Test delete button 
+    * Verify that recipe has been deleted
+7. Logout
+    * Log out
+    * Test accessing pages available only for logged in users e.g. profile page or thank you page (Wraps redirects to Login page)
+8. Search
+    * Search a recipe by ingredient or title 
+    * If no recipes are found, user is notified "No results found. Please try again"
+
+    Note: search does not return results for words like "and", "if", "other", "after"
+
+### Errors
