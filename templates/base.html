@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="Description" content="This is a website for cannabis based recipes.">
         <link
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -13,7 +14,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" type="text/css" />
         <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" type="text/css" />
         <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
-        <script type="text/javascript" src="https://platform-api.sharethis.com/js/sharethis.js#property=5fd8c5465be97700184ab6d9&product=inline-share-buttons" async="async"></script>
+        <script src="https://platform-api.sharethis.com/js/sharethis.js#property=5fd8c5465be97700184ab6d9&product=inline-share-buttons" async="async"></script>
         {% block styles %} {% endblock %}
         <title>High Cuisine</title>
     </head>
@@ -61,7 +62,7 @@
                 <li><a href="{{ url_for('register')}}">Register</a></li>
                 {% endif%}
             </ul>
-            <!--- BANNER -->
+            <!--- Banner -->
             <div class="wrapper img-fluid">
                 <img class="banner img-fluid" src="{{ url_for('static', filename='images/banner_food.jpg') }}" alt="High Cuisine" />
                 <img class="inner-logo img-fluid" src="{{ url_for('static', filename='images/logo-wb.png') }}" alt="High Cuisine" />
@@ -95,16 +96,16 @@
                         <h5 class="white-text">Follow us</h5>
                         <ul>
                             <li>
-                                <a class="white-text col l6" href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-square"></i> Pinterest</a>
+                                <a class="white-text col l6" href="https://www.pinterest.com/" target="_blank" rel="noopener"><i class="fab fa-pinterest-square"></i> Pinterest</a>
                             </li>
                             <li>
-                                <a class="white-text col l6" href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram-square"></i> Instagram</a>
+                                <a class="white-text col l6" href="https://www.instagram.com/" target="_blank" rel="noopener"><i class="fab fa-instagram-square"></i> Instagram</a>
                             </li>
                             <li>
-                                <a class="white-text col l6" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-square"></i> Facebook</a>
+                                <a class="white-text col l6" href="https://www.facebook.com/" target="_blank" rel="noopener"><i class="fab fa-facebook-square"></i> Facebook</a>
                             </li>
                             <li>
-                                <a class="white-text col l6" href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter-square"></i> Twitter</a>
+                                <a class="white-text col l6" href="https://www.twitter.com/" target="_blank" rel="noopener"><i class="fab fa-twitter-square"></i> Twitter</a>
                             </li>
                         </ul>
                     </div>

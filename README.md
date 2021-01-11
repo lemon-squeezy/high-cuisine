@@ -175,17 +175,13 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
     * Test if navigation works correctly on  all devices  like phone, tablet or desktop PC
     * Test if page is responsive at all sizes
     * Test footer social icon links (links open homepages in a new window)
-    * Attempt accessing non-existant endpoints:
-
-       <img src="{{ url_for('static', filename='images/404.jpg') }}" alt="404" />
-        
-        Correctly returns 404.html with access to go back to homepage
+    * Attempt accessing non-existant endpoints: Correctly returns 404.html with access to go back to homepage
     * Verify that shop page looks as it should.
     * Try submitting empty form or invalid email (shows tooltip "Enter an email adress")
 2. Register
     * Try registering with empty form/inputs (shows tooltip "Fill out this field")
     * Try to register with invalid email ("Enter an email adress")
-    * Attempt to use username/password that is too long or too short ("Match the requested format!")
+    * Attempt to use username/password that is too long ("Match the requested format!")
 3. Login 
     * Try using empty form (shows tooltip "Fill out this field")
     * Try to use not existing or wrong credentials ("Incorrect Username and/or Password!")
@@ -209,8 +205,18 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
     * Test accessing pages available only for logged in users e.g. profile page or thank you page (Wraps redirects to Login page)
 8. Search
     * Search a recipe by ingredient or title 
-    * If no recipes are found, user is notified "No results found. Please try again"
+    * If no recipes are found, user is notified "No results found."
 
     Note: search does not return results for words like "and", "if", "other", "after"
 
 ### Errors
+
+**Current Issues:**
+* I used a quick share option for users via sharethis.com It works fine for chrome and brave but not for Firefox. 
+This is related to browser add-ons such as ghostery.
+
+**Warnings:**
+The type attribute is unnecessary for JavaScript resources. From line 16, column 9; to line 16, column 173 (fixed)
+
+**Lighthouse:**
+Since I link to external websites in my footer, Lighthosue made me aware of a lack of security precautions. I added: rel="noopener"
