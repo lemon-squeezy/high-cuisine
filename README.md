@@ -1,7 +1,7 @@
 ## Code Institute Data Centric Development Milestone Project
 # High Cuisine
 High Cuisine is an cookbook where users can search for recipes, registered users can submit, edit and delete recipes they have posted. However, the focus is on cannabis-based recipes.
-![site logo](static/images/devices.png)
+![site logo](static/readme_docs/devices.png)
 [Visit deployed site](https://high-cuisine-app.herokuapp.com/)
 
 ## Table of Contents
@@ -45,7 +45,10 @@ Using the user stories above, I put together the wireframes using Balsamiq. The 
 [View all wireframes here](static/readme_docs/desktop_wireframes.pdf)
 
 ##### Wireframes for tablets
-##### Wireframes for phones
+[View all wireframes here](static/readme_docs/ipad_wireframes.pdf)
+
+##### Wireframes for mobile
+[View all wireframes here](static/readme_docs/iphone_wireframes.pdf)
 
 #### Color Palette
 
@@ -85,6 +88,8 @@ Orange Soda #F74B2C is used for buttons like: Delete, Edit ...
 - [x] Favicon
 
 ### Future features
+- [ ] A banner that changes depending on the date. For example Christmas or Easter motifs.
+- [ ] Upload window so that the user can upload their own images.
 - [ ] Sorting by category by clicking navigation links.
 - [ ] Pagination
 - [ ] Save favourite recipes by clicking a like button
@@ -229,13 +234,56 @@ You can find detailed step-by-step instructions [here](https://docs.atlas.mongod
 
 ## Deploying the Application to Heroku
 Heroku was used for the deployment of the website. Instructions have been supplied below to complete the action.
-In Heroku, create an app. The app must have a unique name.
-Link that app to the GitHub repository by going to the "Deploy" tab in the main app menu.
-In the Settings tab, add the corresponding Config Variables as present in local development:
+- To deploy your project to heroku, take the following steps:
+- Create a requirements.txt file using the terminal command pip freeze > requirements.txt.
+- Create a Procfile with the terminal command echo web: python app.py > Procfile.
+- Git add and git commit the new requirements and Procfile and then git push the project to GitHub.
+- Create a new app on the Heroku website by clicking the "New" button in your dashboard. Give it a name and set the region to Europe.
+- From the heroku dashboard of your newly created application, click on "Deploy" > "Deployment method" and select GitHub.
+- Confirm the linking of the heroku app to the correct GitHub repository.
+- In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
+- In the Settings tab, add the corresponding Config Variables as present in local development:
 Key | Value
 ------------ | -------------
-IP | To be added by user
-PORT | To be added by user
+IP | 0.0.0.0
+PORT | 5000
+DEBUG | FALSE
 SECRET_KEY | To be added by user
 MONGO_URI | To be added by user
 MONGO_DBNAME | To be added by user
+
+To get your personal MONGO_URI read the MongoDB Atlas (documentation)[https://docs.mongodb.com/manual/reference/connection-string/] or refer to the mongodb guide below.
+In the "Manual Deployment" section of this page, make sure the master branch is selected and then click "Deploy Branch".
+The site is now successfully deployed.
+
+## Credentials
+
+### Code
+**Back to Top** https://www.w3schools.com/howto/howto_js_scroll_to_top.asp
+**Fixed an order/display error** https://stackoverflow.com/questions/43424597/html-layout-messed-up-when-i-zoom-in-or-out
+**app.py** Most of the python code was taken from the Code Institute Task Manager Project made by Tim Nelson
+
+### Images
+**Logo** Designed by myself
+**Banner** (Pexels)[https://www.pexels.com/de-de]
+
+### Content/Media
+- Random Key Gen – Providing secure passwords for the database enabling password creation easy but also very secure. [https://randomkeygen.com/](https://randomkeygen.com/)
+- Font Awesome – Providing various symbols and logs that can be used to provide a better and cleaner design on the website with accurate and simple logos. [https://fontawesome.com/icons](https://fontawesome.com/icons)
+- Materialize – Providing excellent support in implementing features and functions for the website e.g. footer, grids, colour codes and more.
+- Color Picker – User for the color selection examples provided in the Design section. [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+
+## Acknowledgements
+- Special thanks to my mentor Akshat Garg for supporting me thru the whole project.
+- Thank you very much to Tutor Support from Code Institute. These guys are very helpful.
+
+## Disclaimer
+
+If there are any issues with copyright of content, please contact me. I will fix that as soon as possible. 
+
+This project is for educational purposes only.
+
+Adrian Laub 
+2021
+
+[Back to top ↑](#high-cuisine)
