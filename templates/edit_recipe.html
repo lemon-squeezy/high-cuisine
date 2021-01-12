@@ -1,6 +1,6 @@
 {% extends "base.html" %} {% block content %}
 
-<h3 class="green-text text-darken-2 center-align">Edit Recipe</h3>
+<h3 class="center-align">Edit Recipe</h3>
 
 <div class="row card-panel grey-lighten-5">
     <form class="col s12" method="POST" action="{{ url_for('edit_recipe', recipe_id=recipe._id)}}">
@@ -47,20 +47,22 @@
                 <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="2" value="{{ recipe.recipe_serves }}" class="validate" required />
                 <label for="recipe_serves">How many servings?</label>
             </div>
-            <div class="input-field col s6" id="recipe_difficulty" value="{{ recipe.recipe_difficulty }}">
-                <select>
-                <option value="" disabled selected>Which difficulty?</option>
-                <option value="1">Easy</option>
-                <option value="2">Medium</option>
-                <option value="3">Challenging</option>
+            <div class="input-field col s6" value="{{ recipe.recipe_difficulty }}">
+                <select name="recipe_difficulty" id="recipe_difficulty">
+                <option value="{{ recipe.recipe_difficulty }}" disabled selected>{{ recipe.recipe_difficulty }}</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Challenging">Challenging</option>
                 </select>
             </div>
         </div>
         <!-- Recipe Ingredients -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-carrot green-text text-darken-2 prefix"></i>
-                <input id="recipe_ingredients" name="recipe_ingredients" minlength="5" maxlength="50" value="{{ recipe.recipe_ingredients }}" type="text" class="validate" required />
+                <i class="fas fa-carrot general-green prefix"></i>
+                <textarea id="recipe_ingredients" name="recipe_ingredients" value="{{ recipe.recipe_ingredients }}" cols="1" rows="30" class="materialize-textarea validate" required>
+                    {{- recipe.recipe_ingredients -}}
+                </textarea>
                 <label for="recipe_ingredients">Ingredients</label>
             </div>
         </div>

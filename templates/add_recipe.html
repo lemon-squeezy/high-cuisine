@@ -45,12 +45,12 @@
                 <input id="recipe_serves" name="recipe_serves" type="text" minlength="1" maxlength="2" class="validate" required />
                 <label for="recipe_serves">How many servings?</label>
             </div>
-            <div class="input-field col m6 s12" id="recipe_difficulty">
-                <select>
+            <div class="input-field col m6 s12">
+                <select name="recipe_difficulty" id="recipe_difficulty">
                 <option value="" disabled selected>Which difficulty?</option>
-                <option value="1">Easy</option>
-                <option value="2">Medium</option>
-                <option value="3">Challenging</option>
+                <option value="Easy">Easy</option>
+                <option value="Medium">Medium</option>
+                <option value="Challenging">Challenging</option>
                 </select>
             </div>
         </div>
@@ -66,7 +66,7 @@
         <div class="row">
             <div class="input-field col s12">
                 <i class="fas fa-align-left general-green prefix"></i>
-                <textarea id="recipe_method" name="recipe_method" minlength="5" maxlength="3000" class="materialize-textarea validate" required></textarea>
+                <textarea id="recipe_method" name="recipe_method" minlength="5" class="materialize-textarea validate" required></textarea>
                 <label for="recipe_method">Method</label>
             </div>
         </div>

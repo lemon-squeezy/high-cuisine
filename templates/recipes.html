@@ -20,13 +20,13 @@
 
 {% if recipes|length > 0 %}
 <!--Recipe card structure-->
-<div class="container card-container">
+<div class="container  recipe-container card-container">
     <div class="row">
         {% for recipe in recipes %}
         <div class="col s12 m4">
             <div class="card recipe-card">
                 <!--Recipe card image-->
-                <div class="card-image card-img">
+                <div class="card-image">
                     <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}">
                         <img src="{{ recipe.img_url }}" alt="Recipe image" loading="lazy" />
                     </a>
@@ -49,7 +49,7 @@
                             <!--Delete btn and modal for delete confirmation-->
                             <div class="col s12">
                                 <!-- Delete btn and modal trigger -->
-                                <a data-target="{{ recipe._id }}" class="btn-small btn-red">Delete</a>
+                                <a data-target="{{ recipe._id }}" class="btn-small btn-red modal-trigger">Delete</a>
                                 {% else %}
                                 <div class="col s12 center-align">
                                     <a href="{{ url_for('view_recipe', recipe_id=recipe._id) }}" class="btn-small">Cook it!</a>

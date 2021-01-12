@@ -154,7 +154,9 @@ nav ul a{
     padding-left: 10px;
     padding-right: 10px;
 }
-
+.mar-bot{
+    margin-bottom: 2rem;
+}
 /* Overriding Materialize-Styles */
 .fas{
     margin-right: 5px;
@@ -167,6 +169,10 @@ ul.basics:not(.browser-default)>li{
 main.container{
     min-height: calc(100vh - 350px);
 } 
+.recipe-container{
+    width: 100%;
+
+}
 
 .card-content{
     min-height: 235px; 
@@ -184,8 +190,11 @@ main.container{
 a.profile{
     color: #369956;
     font-size: 1rem;
+    text-decoration: underline;
 }
-
+.dropdown-content li>a, .dropdown-content li>span {
+    color: #369956;
+}
 /* Mdeia Queries */
 @media only screen and (max-width: 768px) {
   h1 {
@@ -215,7 +224,7 @@ a.profile{
 }
 
 .card .card-image img {
-    height: 120px;
+    height: 170px;
     overflow: hidden;
     margin: auto;
     object-fit: cover;
@@ -229,4 +238,15 @@ a.profile{
   top: -5px;
   left: 10px;
 }
-} 
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) { 
+.card .card-image img {
+      height: 120px;
+  }
+}

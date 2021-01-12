@@ -219,6 +219,8 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
 **Current Issues:**
 * I used a quick share option for users via sharethis.com It works fine for chrome and brave but not for Firefox. 
 This is related to browser add-ons such as ghostery.
+* I had a display issue on mobile with landscape mode. I fixed it with corresponding media query.
+* Editing a recipe without any changes and clicking the "Update Recipe" Button leads to a strange error. The value changes to None.
 
 **Warnings:**
 The type attribute is unnecessary for JavaScript resources. From line 16, column 9; to line 16, column 173 (fixed)
@@ -243,14 +245,13 @@ Heroku was used for the deployment of the website. Instructions have been suppli
 - Confirm the linking of the heroku app to the correct GitHub repository.
 - In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
 - In the Settings tab, add the corresponding Config Variables as present in local development:
-Key | Value
------------- | -------------
-IP | 0.0.0.0
-PORT | 5000
-DEBUG | FALSE
-SECRET_KEY | To be added by user
-MONGO_URI | To be added by user
-MONGO_DBNAME | To be added by user
+| Key          | Value               |
+|--------------|---------------------|
+| IP           | 0.0.0.0             |
+| DEBUG        | False               |
+| SECRET_KEY   | To be added by user |
+| MONGO_URI    | To be added by user |
+| MONGO_DBNAME | To be added by user |
 
 To get your personal MONGO_URI read the MongoDB Atlas (documentation)[https://docs.mongodb.com/manual/reference/connection-string/] or refer to the mongodb guide below.
 In the "Manual Deployment" section of this page, make sure the master branch is selected and then click "Deploy Branch".
