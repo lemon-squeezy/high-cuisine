@@ -1,7 +1,7 @@
 ## Code Institute Data Centric Development Milestone Project
 # High Cuisine
 High Cuisine is an cookbook where users can search for recipes, registered users can submit, edit and delete recipes they have posted. However, the focus is on cannabis-based recipes.
-![site logo](static/images/banner_food.jpg)
+![site logo](static/images/devices.png)
 [Visit deployed site](https://high-cuisine-app.herokuapp.com/)
 
 ## Table of Contents
@@ -44,8 +44,8 @@ Using the user stories above, I put together the wireframes using Balsamiq. The 
 ##### Wireframes for desktop
 [View all wireframes here](static/readme_docs/desktop_wireframes.pdf)
 
-##### Wireframes for desktop
-##### Wireframes for desktop
+##### Wireframes for tablets
+##### Wireframes for phones
 
 #### Color Palette
 
@@ -220,3 +220,22 @@ The type attribute is unnecessary for JavaScript resources. From line 16, column
 
 **Lighthouse:**
 Since I link to external websites in my footer, Lighthosue made me aware of a lack of security precautions. I added: rel="noopener"
+
+## Deployment
+
+### Connecting to Mongo DB
+To set up this project the use of a database is required. MongoDB Atlas is perfect for this usecase.
+You can find detailed step-by-step instructions [here](https://docs.atlas.mongodb.com/getting-started)
+
+## Deploying the Application to Heroku
+Heroku was used for the deployment of the website. Instructions have been supplied below to complete the action.
+In Heroku, create an app. The app must have a unique name.
+Link that app to the GitHub repository by going to the "Deploy" tab in the main app menu.
+In the Settings tab, add the corresponding Config Variables as present in local development:
+Key | Value
+------------ | -------------
+IP | To be added by user
+PORT | To be added by user
+SECRET_KEY | To be added by user
+MONGO_URI | To be added by user
+MONGO_DBNAME | To be added by user
