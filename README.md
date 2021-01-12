@@ -1,7 +1,7 @@
 ## Code Institute Data Centric Development Milestone Project
 # High Cuisine
 High Cuisine is an cookbook where users can search for recipes, registered users can submit, edit and delete recipes they have posted. However, the focus is on cannabis-based recipes.
-![site logo](static/readme_docs/devices.png)
+![High Cusine Homepage](static/readme_docs/devices.png)
 [Visit deployed site](https://high-cuisine-app.herokuapp.com/)
 
 ## Table of Contents
@@ -42,13 +42,13 @@ There are tons of recipe websites out there. However, most of them are packed wi
 Using the user stories above, I put together the wireframes using Balsamiq. The wireframes covered desktop, tablet and mobile formats. Due to the navigation items changing depending on whether a user is signed in or not, a number of additional wireframes were needed to be created to show the difference. For example, when a user is not signed in to the site, they cannot view the ‘Add Recipe’ page and can see buttons in the main navigation for Register and Sign In. When a user has registered/signed into the site, these buttons are hidden and ‘Sign Out’ becomes visible, as does ‘Add a Recipe'.
 
 ##### Wireframes for desktop
-[View all wireframes here](static/readme_docs/desktop_wireframes.pdf)
+[desktop](static/readme_docs/desktop_wireframes.pdf)
 
 ##### Wireframes for tablets
-[View all wireframes here](static/readme_docs/ipad_wireframes.pdf)
+[tablet](static/readme_docs/ipad_wireframes.pdf)
 
 ##### Wireframes for mobile
-[View all wireframes here](static/readme_docs/iphone_wireframes.pdf)
+[mobile](static/readme_docs/iphone_wireframes.pdf)
 
 #### Color Palette
 

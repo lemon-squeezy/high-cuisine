@@ -237,10 +237,14 @@ def view_recipe(recipe_id):
     return render_template('view_recipe.html', recipe=recipe)
 
 
+# Terms
+
 @app.route('/terms')
 def terms():
     return render_template('terms.html')
 
+
+# Errors
 
 @app.errorhandler(404)
 def page_not_found(e):
