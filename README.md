@@ -192,6 +192,8 @@ Devices and platforms used for testing:
 * Ipad Pro
     - Safari 
     - Chrome
+* Huawei  P20 Pro
+    - Chrome
 * Lenovo Thinkpad E590 16.5"
     - Chrome
     - Firefox
@@ -255,6 +257,9 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
 This is related to browser add-ons such as ghostery.
 * I had a display issue on mobile with landscape mode. I fixed it with corresponding media query.
 * Editing a recipe without any changes and clicking the "Update Recipe" Button leads to a strange error. The value of difficulty changes to None. Even tutor support wasn't able to help me with this bug.
+* Select form for "Choose category" and "Difficulty" doesn't work as expected on Iphone. 
+The selection moves one field up or down. I wasn't able to fix this bug. 
+The problem seems to be related to the new iOS. (Description)[https://github.com/Dogfalo/materialize/issues/6464]
 
 **Warnings:**
 * The type attribute is unnecessary for JavaScript resources. From line 16, column 9; to line 16, column 173 (fixed)

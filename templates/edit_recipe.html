@@ -7,7 +7,7 @@
         <!-- Category selection -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-folder-open green-text text-darken-2 prefix"></i>
+                <i class="fas fa-folder-open general-green prefix"></i>
                 <select id="category_name" name="category_name" class="validate" required>
                     <option value="" disabled>Choose Category</option>
                     {% for category in categories %} {% if category.category_name == recipe.category_name %}
@@ -22,7 +22,7 @@
         <!-- Recipe Name -->
         <div class="row">
             <div class="input-field col s12">
-                <i class="fas fa-pencil-alt green-text text-darken-2 prefix"></i>
+                <i class="fas fa-pencil-alt general-green prefix"></i>
                 <input id="recipe_name" name="recipe_name" minlength="5" maxlength="60" value="{{ recipe.recipe_name }}" type="text" class="validate" required />
                 <label for="recipe_name">Recipe Name</label>
             </div>

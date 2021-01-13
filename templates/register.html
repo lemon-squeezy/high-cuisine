@@ -17,15 +17,16 @@
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-plus prefix general-green"></i>
-                    <input id="username" name="username" type="text" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required />
+                    <input id="username" name="username" type="text" minlength="5" maxlength="25" pattern="^[a-zA-Z0-9]{5,25}$" class="validate" required />
                     <label for="username">Username</label>
+                    <span class="helper-text" data-error="wrong" data-success="right">Don't use spaces or special characters.</span>
                 </div>
             </div>
             <!-- password -->
             <div class="row">
                 <div class="input-field col s12">
                     <i class="fas fa-user-lock prefix general-green"></i>
-                    <input id="password" name="password" type="password" minlength="5" maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" class="validate" required />
+                    <input id="password" name="password" type="password" minlength="5" maxlength="20" pattern="^[a-zA-Z0-9]{5,20}$" class="validate" required />
                     <label for="password">Password</label>
                 </div>
             </div>
