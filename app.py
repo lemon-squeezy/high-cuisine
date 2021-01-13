@@ -27,8 +27,9 @@ mongo = PyMongo(app)
 
 current_date = datetime.today().strftime('%d.%m.%Y')
 
+""" throws users that are not logged in to Login page if they try to
+ access certain pages"""
 
-# throws users that are not logged in to Login page if they try to access certain pages
 
 def login_required(f):
 
@@ -258,4 +259,4 @@ def internal_error(error):
 
 if __name__ == '__main__':
     app.run(host=os.environ.get('IP'), port=int(os.environ.get('PORT'
-            )), debug=True)
+            )), debug=False)
