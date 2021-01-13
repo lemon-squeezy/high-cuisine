@@ -19,7 +19,7 @@ High Cuisine is an cookbook where users can search for recipes, registered users
   * [Features](#features)
     + [Existing features](#existing-features)
     + [Future features](#future-features)
-    + [Information Architecture](#information-architecture)
+  * [Information Architecture](#information-architecture)
       - [Current schema:](#current-schema-)
   * [Technologies Used](#technologies-used)
   * [Tools Used](#tools-used)
@@ -60,9 +60,10 @@ As a User I would like to:
 - [x] Access a list of all recipes
 - [x] Get error messages in case user has done something wrong or there is an issue with database.
 - [ ] Browse recipes by category
+- [ ] Be able to upload my own images for a recipe
 
 As an admin I would like to do all of the above plus:
-- [x] Be able to access, edit and delete ALL recipes from admin profile
+- [x] Be able to access, edit and delete ALL recipes from admin profile.
 
 ### Design
 Main inspiration for the home page comes from Meatblog site. After talking to a chronically ill friend, I decided on a cannabis-based recipe website.
@@ -147,7 +148,7 @@ Orange Soda #F74B2C is used for buttons like: Delete, Edit ...
 - [ ] SSL certificate
 - [ ] Recipe Comments
 
-### Information Architecture
+## Information Architecture
 MongoDB Atlas is used for storing data for this web site.
 
 #### Current schema: 
@@ -279,13 +280,14 @@ Heroku was used for the deployment of the website. Instructions have been suppli
 - Confirm the linking of the heroku app to the correct GitHub repository.
 - In the heroku dashboard for the application, click on "Settings" > "Reveal Config Vars".
 - In the Settings tab, add the corresponding Config Variables as present in local development:
-| Key          | Value               |
-|--------------|---------------------|
-| IP           | 0.0.0.0             |
-| DEBUG        | False               |
-| SECRET_KEY   | To be added by user |
-| MONGO_URI    | To be added by user |
-| MONGO_DBNAME | To be added by user |
+
+| Key          	| Value               	|
+|--------------	|---------------------	|
+| IP           	| 0.0.0.0             	|
+| DEBUG        	| False               	|
+| SECRET_KEY   	| To be added by user 	|
+| MONGO_URI    	| To be added by user 	|
+| MONGO_DBNAME 	| To be added by user 	|
 
 To get your personal MONGO_URI read the MongoDB Atlas (documentation)[https://docs.mongodb.com/manual/reference/connection-string/] or refer to the mongodb guide below.
 In the "Manual Deployment" section of this page, make sure the master branch is selected and then click "Deploy Branch".
