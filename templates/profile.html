@@ -1,35 +1,30 @@
 {% extends "base.html" %} {% block content %}
-
+<!-- User receives greetings -->
 <h3 class="center-align">Hello {{ username }}!</h3>
 <div class="valign-wrapper"></div>
 <div class="row">
-    
-    
-        <div class="card-panel ">
-            
-            <div class="row">
-    <div class="col s12 ">
-        
-        <div class="row container">
-            {% if recipes.count() %}
-        <h4>This are your recipes:</h4>
-            {% for recipe in recipes %}
-            <div class="col s12 left-align">
-                 <a class="profile " href="{{url_for('view_recipe', recipe_id=recipe._id)}}" title="{{ recipe.recipe_name }}">
-               <i class="fas fa-cannabis"></i>{{recipe.recipe_name}} </a> 
+    <div class="card-panel">
+        <div class="row">
+            <div class="col s12">
+                <div class="row container">
+                    {% if recipes.count() %}
+                    <h4>This are your recipes:</h4>
+                    {% for recipe in recipes %}
+                    <div class="col s12 left-align">
+                        <a class="profile" href="{{url_for('view_recipe', recipe_id=recipe._id)}}" title="{{ recipe.recipe_name }}"> <i class="fas fa-cannabis"></i>{{recipe.recipe_name}} </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% else %}
+                <h4>
+                    Nothing here yet! <br />
+                    Add some recipes for your collection.
+                </h4>
+                <a href="{{ url_for('add_recipe') }}" class="btn btn-small text-uppercase">Submit recipe</a>
+                {% endif %}
             </div>
-            {% endfor %}
         </div>
-        {% else %}
-        <h4>Nothing here yet! <br> Add some recipes for your collection.</h4>
-        <a href="{{ url_for('add_recipe') }}" class="btn btn-small text-uppercase">Submit recipe</a>
-        {% endif %}
     </div>
-    </div> 
-        </div>
-    
 </div>
-</div>
-
 
 {% endblock %}

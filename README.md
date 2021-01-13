@@ -128,6 +128,7 @@ Orange Soda #F74B2C is used for buttons like: Delete, Edit ...
 - [ ] Sorting by category by clicking navigation links.
 - [ ] Pagination
 - [ ] Save favourite recipes by clicking a like button
+- [ ] A history section about the prohibition of cannabis
 - [ ] Google login 
 - [ ] Prevent duplicate subscribers
 - [ ] "Remember me" signup checkbox
@@ -136,8 +137,6 @@ Orange Soda #F74B2C is used for buttons like: Delete, Edit ...
 - [ ] Ability to click on other user profiles and see recipes they posted
 - [ ] Page loading animation
 - [ ] Third party search engine
-- [ ] Subscription letters
-- [ ] Filter emails so that there are no duplicates for subscription letters
 - [ ] Admin console
 - [ ] Contact form and admin to be able to see all recieved messages directly in the admin console
 - [ ] Recipe image url validation
@@ -258,7 +257,9 @@ This is related to browser add-ons such as ghostery.
 * Editing a recipe without any changes and clicking the "Update Recipe" Button leads to a strange error. The value of difficulty changes to None. Even tutor support wasn't able to help me with this bug.
 
 **Warnings:**
-The type attribute is unnecessary for JavaScript resources. From line 16, column 9; to line 16, column 173 (fixed)
+* The type attribute is unnecessary for JavaScript resources. From line 16, column 9; to line 16, column 173 (fixed)
+* Section lacks heading. Consider using h2-h6 elements to add identifying headings to all sections.
+From line 64, column 9; to line 64, column 17
 
 **Lighthouse:**
 Since I link to external websites in my footer, Lighthosue made me aware of a lack of security precautions. I added: rel="noopener"
@@ -303,6 +304,8 @@ The site is now successfully deployed.
 ### Images
 **Logo** Designed by myself
 **Banner** (Pexels)[https://www.pexels.com/de-de]
+**Shop** Since my own cookbook does not yet exist, I have taken a work here that has inspired me.
+**Recipe** The source varies as each user uses their own links for the images
 
 ### Content/Media
 - Random Key Gen – Used for secure passwords for the database enabling password creation easy but also very secure. [https://randomkeygen.com/](https://randomkeygen.com/)
