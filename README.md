@@ -5,6 +5,40 @@ High Cuisine is an cookbook where users can search for recipes, registered users
 [Visit deployed site](https://high-cuisine-app.herokuapp.com/)
 
 ## Table of Contents
+  * [UI/UX](#ui-ux)
+    + [Project goals](#project-goals)
+    + [User Stories](#user-stories)
+    + [Design](#design)
+      - [Research](#research)
+      - [Wireframes](#wireframes)
+        * [Wireframes for desktop](#wireframes-for-desktop)
+        * [Wireframes for tablets](#wireframes-for-tablets)
+        * [Wireframes for mobile](#wireframes-for-mobile)
+      - [Color Palette](#color-palette)
+    + [Defensive design](#defensive-design)
+  * [Features](#features)
+    + [Existing features](#existing-features)
+    + [Future features](#future-features)
+    + [Information Architecture](#information-architecture)
+      - [Current schema:](#current-schema-)
+  * [Technologies Used](#technologies-used)
+  * [Tools Used](#tools-used)
+  * [Testing](#testing)
+    + [Validators and linters](#validators-and-linters)
+    + [Manual testing](#manual-testing)
+    + [Errors](#errors)
+  * [Deployment](#deployment)
+    + [Connecting to Mongo DB](#connecting-to-mongo-db)
+  * [Deploying the Application to Heroku](#deploying-the-application-to-heroku)
+  * [Credentials](#credentials)
+    + [Code](#code)
+    + [Images](#images)
+    + [Content/Media](#content-media)
+  * [Acknowledgements](#acknowledgements)
+  * [Disclaimer](#disclaimer)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 ## UI/UX
 ### Project goals
@@ -193,7 +227,7 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
 4. Add recipe
     * Go to the "Add Recipe" page
     * Try to submit empty form and verify that no recipe has been added to any category page.
-    * Try to submit filled out form and verify that fields appear correctly, there is no missing information
+    * Try to submit filled out form and verify that fields appear correctly, there is no missing information.
     * Try to submit recipe with empty fields
 5. Edit recipe
     * Try to submit recipe with empty fields
@@ -220,7 +254,7 @@ I used the website [PEP8](http://pep8online.com/) to check my app.py files compl
 * I used a quick share option for users via sharethis.com It works fine for chrome and brave but not for Firefox. 
 This is related to browser add-ons such as ghostery.
 * I had a display issue on mobile with landscape mode. I fixed it with corresponding media query.
-* Editing a recipe without any changes and clicking the "Update Recipe" Button leads to a strange error. The value changes to None.
+* Editing a recipe without any changes and clicking the "Update Recipe" Button leads to a strange error. The value of difficulty changes to None. Even tutor support wasn't able to help me with this bug.
 
 **Warnings:**
 The type attribute is unnecessary for JavaScript resources. From line 16, column 9; to line 16, column 173 (fixed)
@@ -269,10 +303,11 @@ The site is now successfully deployed.
 **Banner** (Pexels)[https://www.pexels.com/de-de]
 
 ### Content/Media
-- Random Key Gen – Providing secure passwords for the database enabling password creation easy but also very secure. [https://randomkeygen.com/](https://randomkeygen.com/)
+- Random Key Gen – Used for secure passwords for the database enabling password creation easy but also very secure. [https://randomkeygen.com/](https://randomkeygen.com/)
 - Font Awesome – Providing various symbols and logs that can be used to provide a better and cleaner design on the website with accurate and simple logos. [https://fontawesome.com/icons](https://fontawesome.com/icons)
 - Materialize – Providing excellent support in implementing features and functions for the website e.g. footer, grids, colour codes and more.
-- Color Picker – User for the color selection examples provided in the Design section. [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+- Color Picker – Used for the color selection examples provided in the Design section. [https://htmlcolorcodes.com/](https://htmlcolorcodes.com/)
+
 
 ## Acknowledgements
 - Special thanks to my mentor Akshat Garg for supporting me thru the whole project.

@@ -35,6 +35,7 @@ i.fas.fa-arrow-circle-up {
     background-color: #369956;
     color: #fff;
     transition-duration: 0.4s;
+    width: max-content;
 }
 
 .btn:hover, .btn-small:hover, .btn-large:hover{
